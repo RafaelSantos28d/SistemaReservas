@@ -1,0 +1,28 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using SistemReserva.Infrastructure.Context;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace SistemReserva.InfraIoC
+{
+    public static class DependencyInjection
+    {
+        public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
+        {
+            services.AddDbContext<BancoContext>(options =>
+            options.UseMySql(
+                configuration.GetConnectionString("DefaultConnection"),
+                ServerVersion.AutoDetect(
+                    configuration.GetConnectionString("DefaultConnection")),
+
+                b => b.MigrationsAssembly(typeof(BancoContext).Assembly.FullName)
+                ));
+
+            return services;
+        }
+
+    }
+}

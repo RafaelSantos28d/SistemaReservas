@@ -1,0 +1,12 @@
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Domain\bin\Debug\net10.0\SistemReserva.Domain.deps.json
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Domain\bin\Debug\net10.0\SistemReserva.Domain.dll
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Domain\bin\Debug\net10.0\SistemReserva.Domain.pdb
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Domain\obj\Debug\net10.0\SistemReserva.Domain.csproj.AssemblyReference.cache
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Domain\obj\Debug\net10.0\SistemReserva.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Domain\obj\Debug\net10.0\SistemReserva.Domain.AssemblyInfoInputs.cache
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Domain\obj\Debug\net10.0\SistemReserva.Domain.AssemblyInfo.cs
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Domain\obj\Debug\net10.0\SistemReserva.Domain.csproj.CoreCompileInputs.cache
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Domain\obj\Debug\net10.0\SistemReserva.Domain.dll
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Domain\obj\Debug\net10.0\refint\SistemReserva.Domain.dll
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Domain\obj\Debug\net10.0\SistemReserva.Domain.pdb
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Domain\obj\Debug\net10.0\ref\SistemReserva.Domain.dll

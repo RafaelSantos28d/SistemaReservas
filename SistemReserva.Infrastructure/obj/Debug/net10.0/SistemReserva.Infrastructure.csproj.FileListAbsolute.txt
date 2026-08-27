@@ -1,0 +1,17 @@
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Infrastructure\bin\Debug\net10.0\SistemReserva.Infrastructure.deps.json
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Infrastructure\bin\Debug\net10.0\SistemReserva.Infrastructure.dll
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Infrastructure\bin\Debug\net10.0\SistemReserva.Infrastructure.pdb
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Infrastructure\bin\Debug\net10.0\SistemReserva.Domain.dll
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Infrastructure\bin\Debug\net10.0\SistemReserva.Domain.pdb
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Infrastructure\obj\Debug\net10.0\SistemReserva.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Infrastructure\obj\Debug\net10.0\SistemReserva.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Infrastructure\obj\Debug\net10.0\SistemReserva.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Infrastructure\obj\Debug\net10.0\SistemReserva.Infrastructure.AssemblyInfo.cs
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Infrastructure\obj\Debug\net10.0\SistemReserva.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Infrastructure\obj\Debug\net10.0\SistemRe.7980A516.Up2Date
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Infrastructure\obj\Debug\net10.0\SistemReserva.Infrastructure.dll
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Infrastructure\obj\Debug\net10.0\refint\SistemReserva.Infrastructure.dll
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Infrastructure\obj\Debug\net10.0\SistemReserva.Infrastructure.pdb
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Infrastructure\obj\Debug\net10.0\ref\SistemReserva.Infrastructure.dll
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Infrastructure\bin\Debug\net10.0\SistemReserva.Infrastructure.runtimeconfig.json
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Infrastructure\obj\Debug\net10.0\SistemReserva.Infrastructure.genruntimeconfig.cache

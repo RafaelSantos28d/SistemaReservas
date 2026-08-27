@@ -1,0 +1,11 @@
+C:\Users\mique\source\repos\SistemaReserva\SistemaReserva.Application\bin\Debug\net10.0\SistemaReserva.Application.deps.json
+C:\Users\mique\source\repos\SistemaReserva\SistemaReserva.Application\bin\Debug\net10.0\SistemaReserva.Application.dll
+C:\Users\mique\source\repos\SistemaReserva\SistemaReserva.Application\bin\Debug\net10.0\SistemaReserva.Application.pdb
+C:\Users\mique\source\repos\SistemaReserva\SistemaReserva.Application\obj\Debug\net10.0\SistemaReserva.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mique\source\repos\SistemaReserva\SistemaReserva.Application\obj\Debug\net10.0\SistemaReserva.Application.AssemblyInfoInputs.cache
+C:\Users\mique\source\repos\SistemaReserva\SistemaReserva.Application\obj\Debug\net10.0\SistemaReserva.Application.AssemblyInfo.cs
+C:\Users\mique\source\repos\SistemaReserva\SistemaReserva.Application\obj\Debug\net10.0\SistemaReserva.Application.csproj.CoreCompileInputs.cache
+C:\Users\mique\source\repos\SistemaReserva\SistemaReserva.Application\obj\Debug\net10.0\SistemaReserva.Application.dll
+C:\Users\mique\source\repos\SistemaReserva\SistemaReserva.Application\obj\Debug\net10.0\refint\SistemaReserva.Application.dll
+C:\Users\mique\source\repos\SistemaReserva\SistemaReserva.Application\obj\Debug\net10.0\SistemaReserva.Application.pdb
+C:\Users\mique\source\repos\SistemaReserva\SistemaReserva.Application\obj\Debug\net10.0\ref\SistemaReserva.Application.dll

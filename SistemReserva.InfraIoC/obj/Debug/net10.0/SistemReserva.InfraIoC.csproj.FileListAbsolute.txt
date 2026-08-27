@@ -1,0 +1,17 @@
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.InfraIoC\bin\Debug\net10.0\SistemReserva.InfraIoC.deps.json
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.InfraIoC\bin\Debug\net10.0\SistemReserva.InfraIoC.dll
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.InfraIoC\bin\Debug\net10.0\SistemReserva.InfraIoC.pdb
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.InfraIoC\obj\Debug\net10.0\SistemReserva.InfraIoC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.InfraIoC\obj\Debug\net10.0\SistemReserva.InfraIoC.AssemblyInfoInputs.cache
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.InfraIoC\obj\Debug\net10.0\SistemReserva.InfraIoC.AssemblyInfo.cs
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.InfraIoC\obj\Debug\net10.0\SistemReserva.InfraIoC.csproj.CoreCompileInputs.cache
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.InfraIoC\obj\Debug\net10.0\SistemReserva.InfraIoC.dll
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.InfraIoC\obj\Debug\net10.0\refint\SistemReserva.InfraIoC.dll
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.InfraIoC\obj\Debug\net10.0\SistemReserva.InfraIoC.pdb
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.InfraIoC\obj\Debug\net10.0\ref\SistemReserva.InfraIoC.dll
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.InfraIoC\bin\Debug\net10.0\SistemReserva.Domain.dll
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.InfraIoC\bin\Debug\net10.0\SistemReserva.Infrastructure.dll
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.InfraIoC\bin\Debug\net10.0\SistemReserva.Infrastructure.pdb
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.InfraIoC\bin\Debug\net10.0\SistemReserva.Domain.pdb
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.InfraIoC\obj\Debug\net10.0\SistemReserva.InfraIoC.csproj.AssemblyReference.cache
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.InfraIoC\obj\Debug\net10.0\SistemRe.2EE9F6BA.Up2Date
