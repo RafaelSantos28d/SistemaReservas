@@ -1,5 +1,31 @@
 [
   {
+    "ContainingType": "SistemReserva.API.Controllers.RecursoController",
+    "Method": "CreateRecursoAsync",
+    "RelativePath": "api/Recurso",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "SistemaReserva.Application.Recursos.CreateRecurso.CreateRecursoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SistemaReserva.Application.Recursos.CreateRecurso.CreateRecursoResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "SistemReserva.API.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

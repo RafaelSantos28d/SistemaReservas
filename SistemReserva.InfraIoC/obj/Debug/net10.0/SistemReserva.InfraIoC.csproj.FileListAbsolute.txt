@@ -15,3 +15,6 @@ C:\Users\mique\source\repos\SistemaReserva\SistemReserva.InfraIoC\bin\Debug\net1
 C:\Users\mique\source\repos\SistemaReserva\SistemReserva.InfraIoC\bin\Debug\net10.0\SistemReserva.Domain.pdb
 C:\Users\mique\source\repos\SistemaReserva\SistemReserva.InfraIoC\obj\Debug\net10.0\SistemReserva.InfraIoC.csproj.AssemblyReference.cache
 C:\Users\mique\source\repos\SistemaReserva\SistemReserva.InfraIoC\obj\Debug\net10.0\SistemRe.2EE9F6BA.Up2Date
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.InfraIoC\bin\Debug\net10.0\SistemaReserva.Application.dll
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.InfraIoC\bin\Debug\net10.0\SistemaReserva.Application.pdb
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.InfraIoC\obj\Debug\net10.0\SistemReserva.InfraIoC.sourcelink.json

@@ -130,3 +130,11 @@ C:\Users\mique\source\repos\SistemaReserva\SistemReserva.API\bin\Debug\net10.0\S
 C:\Users\mique\source\repos\SistemaReserva\SistemReserva.API\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\mique\source\repos\SistemaReserva\SistemReserva.API\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\mique\source\repos\SistemaReserva\SistemReserva.API\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.API\bin\Debug\net10.0\AutoMapper.dll
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.API\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.API\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.API\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.API\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.API\bin\Debug\net10.0\SistemaReserva.Application.dll
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.API\bin\Debug\net10.0\SistemaReserva.Application.pdb
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.API\obj\Debug\net10.0\SistemReserva.API.sourcelink.json

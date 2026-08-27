@@ -1,7 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using SistemaReserva.Application.Recursos.CreateRecurso;
+using SistemReserva.Domain.Interfaces;
 using SistemReserva.Infrastructure.Context;
+using SistemReserva.Infrastructure.Repositories;
+using SistemaReserva.Application.Common;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -20,6 +24,18 @@ namespace SistemReserva.InfraIoC
 
                 b => b.MigrationsAssembly(typeof(BancoContext).Assembly.FullName)
                 ));
+
+
+
+            services.AddScoped<IRecursoRepository, RecursoRepository>();
+            services.AddScoped<ICreateRecursoService, CreateRecursoService>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            services.AddAutoMapper(
+                cfg => { },
+                typeof(DomainMappingProfile).Assembly
+
+            );
 
             return services;
         }

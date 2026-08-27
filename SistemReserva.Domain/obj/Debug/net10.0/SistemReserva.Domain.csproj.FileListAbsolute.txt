@@ -10,3 +10,4 @@ C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Domain\obj\Debug\net10.
 C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Domain\obj\Debug\net10.0\refint\SistemReserva.Domain.dll
 C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Domain\obj\Debug\net10.0\SistemReserva.Domain.pdb
 C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Domain\obj\Debug\net10.0\ref\SistemReserva.Domain.dll
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Domain\obj\Debug\net10.0\SistemReserva.Domain.sourcelink.json

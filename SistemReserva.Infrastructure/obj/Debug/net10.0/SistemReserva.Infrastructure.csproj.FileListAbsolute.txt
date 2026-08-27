@@ -15,3 +15,4 @@ C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Infrastructure\obj\Debu
 C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Infrastructure\obj\Debug\net10.0\ref\SistemReserva.Infrastructure.dll
 C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Infrastructure\bin\Debug\net10.0\SistemReserva.Infrastructure.runtimeconfig.json
 C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Infrastructure\obj\Debug\net10.0\SistemReserva.Infrastructure.genruntimeconfig.cache
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.Infrastructure\obj\Debug\net10.0\SistemReserva.Infrastructure.sourcelink.json

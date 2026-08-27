@@ -9,3 +9,8 @@ C:\Users\mique\source\repos\SistemaReserva\SistemaReserva.Application\obj\Debug\
 C:\Users\mique\source\repos\SistemaReserva\SistemaReserva.Application\obj\Debug\net10.0\refint\SistemaReserva.Application.dll
 C:\Users\mique\source\repos\SistemaReserva\SistemaReserva.Application\obj\Debug\net10.0\SistemaReserva.Application.pdb
 C:\Users\mique\source\repos\SistemaReserva\SistemaReserva.Application\obj\Debug\net10.0\ref\SistemaReserva.Application.dll
+C:\Users\mique\source\repos\SistemaReserva\SistemaReserva.Application\bin\Debug\net10.0\SistemReserva.Domain.dll
+C:\Users\mique\source\repos\SistemaReserva\SistemaReserva.Application\bin\Debug\net10.0\SistemReserva.Domain.pdb
+C:\Users\mique\source\repos\SistemaReserva\SistemaReserva.Application\obj\Debug\net10.0\SistemaReserva.Application.csproj.AssemblyReference.cache
+C:\Users\mique\source\repos\SistemaReserva\SistemaReserva.Application\obj\Debug\net10.0\SistemaReserva.Application.sourcelink.json
+C:\Users\mique\source\repos\SistemaReserva\SistemaReserva.Application\obj\Debug\net10.0\SistemaR.0B0E4D19.Up2Date
