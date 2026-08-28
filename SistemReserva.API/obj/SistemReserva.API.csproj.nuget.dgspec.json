@@ -4,12 +4,12 @@
     "C:\\Users\\mique\\source\\repos\\SistemaReserva\\SistemReserva.API\\SistemReserva.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mique\\source\\repos\\SistemaReserva\\SistemaReserva.Application\\SistemaReserva.Application.csproj": {
+    "C:\\Users\\mique\\source\\repos\\SistemaReserva\\SistemaReserva.Application\\SistemReserva.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mique\\source\\repos\\SistemaReserva\\SistemaReserva.Application\\SistemaReserva.Application.csproj",
-        "projectName": "SistemaReserva.Application",
-        "projectPath": "C:\\Users\\mique\\source\\repos\\SistemaReserva\\SistemaReserva.Application\\SistemaReserva.Application.csproj",
+        "projectUniqueName": "C:\\Users\\mique\\source\\repos\\SistemaReserva\\SistemaReserva.Application\\SistemReserva.Application.csproj",
+        "projectName": "SistemReserva.Application",
+        "projectPath": "C:\\Users\\mique\\source\\repos\\SistemaReserva\\SistemaReserva.Application\\SistemReserva.Application.csproj",
         "packagesPath": "C:\\Users\\mique\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\mique\\source\\repos\\SistemaReserva\\SistemaReserva.Application\\obj\\",
         "projectStyle": "PackageReference",
@@ -1246,8 +1246,8 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\mique\\source\\repos\\SistemaReserva\\SistemaReserva.Application\\SistemaReserva.Application.csproj": {
-                "projectPath": "C:\\Users\\mique\\source\\repos\\SistemaReserva\\SistemaReserva.Application\\SistemaReserva.Application.csproj"
+              "C:\\Users\\mique\\source\\repos\\SistemaReserva\\SistemaReserva.Application\\SistemReserva.Application.csproj": {
+                "projectPath": "C:\\Users\\mique\\source\\repos\\SistemaReserva\\SistemaReserva.Application\\SistemReserva.Application.csproj"
               },
               "C:\\Users\\mique\\source\\repos\\SistemaReserva\\SistemReserva.Infrastructure\\SistemReserva.Infrastructure.csproj": {
                 "projectPath": "C:\\Users\\mique\\source\\repos\\SistemaReserva\\SistemReserva.Infrastructure\\SistemReserva.Infrastructure.csproj"

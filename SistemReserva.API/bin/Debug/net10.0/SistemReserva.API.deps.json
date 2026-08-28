@@ -584,13 +584,13 @@
           }
         }
       },
-      "SistemaReserva.Application/1.0.0": {
+      "SistemReserva.Application/1.0.0": {
         "dependencies": {
           "AutoMapper": "16.2.0",
           "SistemReserva.Domain": "1.0.0"
         },
         "runtime": {
-          "SistemaReserva.Application.dll": {
+          "SistemReserva.Application.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -609,8 +609,8 @@
       },
       "SistemReserva.InfraIoC/1.0.0": {
         "dependencies": {
-          "SistemReserva.Infrastructure": "1.0.0",
-          "SistemaReserva.Application": "1.0.0"
+          "SistemReserva.Application": "1.0.0",
+          "SistemReserva.Infrastructure": "1.0.0"
         },
         "runtime": {
           "SistemReserva.InfraIoC.dll": {
@@ -886,7 +886,7 @@
       "path": "system.composition.typedparts/7.0.0",
       "hashPath": "system.composition.typedparts.7.0.0.nupkg.sha512"
     },
-    "SistemaReserva.Application/1.0.0": {
+    "SistemReserva.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -135,6 +135,6 @@ C:\Users\mique\source\repos\SistemaReserva\SistemReserva.API\bin\Debug\net10.0\M
 C:\Users\mique\source\repos\SistemaReserva\SistemReserva.API\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\mique\source\repos\SistemaReserva\SistemReserva.API\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
 C:\Users\mique\source\repos\SistemaReserva\SistemReserva.API\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\mique\source\repos\SistemaReserva\SistemReserva.API\bin\Debug\net10.0\SistemaReserva.Application.dll
-C:\Users\mique\source\repos\SistemaReserva\SistemReserva.API\bin\Debug\net10.0\SistemaReserva.Application.pdb
 C:\Users\mique\source\repos\SistemaReserva\SistemReserva.API\obj\Debug\net10.0\SistemReserva.API.sourcelink.json
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.API\bin\Debug\net10.0\SistemReserva.Application.dll
+C:\Users\mique\source\repos\SistemaReserva\SistemReserva.API\bin\Debug\net10.0\SistemReserva.Application.pdb

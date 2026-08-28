@@ -1,15 +1,16 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using SistemaReserva.Application.Common;
 using SistemaReserva.Application.Recursos.CreateRecurso;
+using SistemaReserva.Application.Recursos.ListRecursos;
+using SistemReserva.Application.Recursos.UpdateRecurso;
 using SistemReserva.Domain.Interfaces;
 using SistemReserva.Infrastructure.Context;
 using SistemReserva.Infrastructure.Repositories;
-using SistemaReserva.Application.Common;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using SistemaReserva.Application.Recursos.ListRecursos;
 
 namespace SistemReserva.InfraIoC
 {
@@ -27,10 +28,11 @@ namespace SistemReserva.InfraIoC
                 ));
 
 
-
+             
             services.AddScoped<IRecursoRepository, RecursoRepository>();
             services.AddScoped<ICreateRecursoService, CreateRecursoService>();
             services.AddScoped<IGetRecursosService, GetRecursosServices>();
+            services.AddScoped<IUpdateRecursoService, UpdateRecursoService>();
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 

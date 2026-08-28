@@ -427,7 +427,7 @@
           }
         }
       },
-      "SistemaReserva.Application/1.0.0": {
+      "SistemReserva.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
@@ -435,10 +435,10 @@
           "SistemReserva.Domain": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/SistemaReserva.Application.dll": {}
+          "bin/placeholder/SistemReserva.Application.dll": {}
         },
         "runtime": {
-          "bin/placeholder/SistemaReserva.Application.dll": {}
+          "bin/placeholder/SistemReserva.Application.dll": {}
         }
       },
       "SistemReserva.Domain/1.0.0": {
@@ -1110,10 +1110,10 @@
         "pomelo.entityframeworkcore.mysql.nuspec"
       ]
     },
-    "SistemaReserva.Application/1.0.0": {
+    "SistemReserva.Application/1.0.0": {
       "type": "project",
-      "path": "../SistemaReserva.Application/SistemaReserva.Application.csproj",
-      "msbuildProject": "../SistemaReserva.Application/SistemaReserva.Application.csproj"
+      "path": "../SistemaReserva.Application/SistemReserva.Application.csproj",
+      "msbuildProject": "../SistemaReserva.Application/SistemReserva.Application.csproj"
     },
     "SistemReserva.Domain/1.0.0": {
       "type": "project",
@@ -1128,8 +1128,8 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
-      "SistemReserva.Infrastructure >= 1.0.0",
-      "SistemaReserva.Application >= 1.0.0"
+      "SistemReserva.Application >= 1.0.0",
+      "SistemReserva.Infrastructure >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1165,8 +1165,8 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\mique\\source\\repos\\SistemaReserva\\SistemaReserva.Application\\SistemaReserva.Application.csproj": {
-              "projectPath": "C:\\Users\\mique\\source\\repos\\SistemaReserva\\SistemaReserva.Application\\SistemaReserva.Application.csproj"
+            "C:\\Users\\mique\\source\\repos\\SistemaReserva\\SistemaReserva.Application\\SistemReserva.Application.csproj": {
+              "projectPath": "C:\\Users\\mique\\source\\repos\\SistemaReserva\\SistemaReserva.Application\\SistemReserva.Application.csproj"
             },
             "C:\\Users\\mique\\source\\repos\\SistemaReserva\\SistemReserva.Infrastructure\\SistemReserva.Infrastructure.csproj": {
               "projectPath": "C:\\Users\\mique\\source\\repos\\SistemaReserva\\SistemReserva.Infrastructure\\SistemReserva.Infrastructure.csproj"

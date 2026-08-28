@@ -2,7 +2,7 @@
   <Folder Name="/Solution Items/">
     <File Path=".gitignore" />
   </Folder>
-  <Project Path="SistemaReserva.Application/SistemaReserva.Application.csproj" />
+  <Project Path="SistemaReserva.Application/SistemReserva.Application.csproj" />
   <Project Path="SistemReserva.API/SistemReserva.API.csproj" />
   <Project Path="SistemReserva.Domain/SistemReserva.Domain.csproj" />
   <Project Path="SistemReserva.InfraIoC/SistemReserva.InfraIoC.csproj" />

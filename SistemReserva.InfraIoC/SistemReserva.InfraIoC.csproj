@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SistemaReserva.Application\SistemaReserva.Application.csproj" />
+    <ProjectReference Include="..\SistemaReserva.Application\SistemReserva.Application.csproj" />
     <ProjectReference Include="..\SistemReserva.Infrastructure\SistemReserva.Infrastructure.csproj" />
   </ItemGroup>
 
