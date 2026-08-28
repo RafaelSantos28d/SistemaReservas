@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using SistemaReserva.Application.Recursos.CreateRecurso;
 using SistemaReserva.Application.Recursos.ListRecursos;
+using SistemReserva.Application.Recursos.DeleteRecurso;
 using SistemReserva.Application.Recursos.UpdateRecurso;
 using SistemReserva.Domain.Pagination;
 
@@ -14,11 +15,13 @@ namespace SistemReserva.API.Controllers
         private readonly ICreateRecursoService _createRecursoService;
         private readonly IGetRecursosService _getRecursosService;
         private readonly IUpdateRecursoService _updateRecursoService;
-        public RecursoController(ICreateRecursoService createRecursoService, IGetRecursosService getRecursosService, IUpdateRecursoService updateRecursoService)
+        private readonly IDeleteRecursoService _deleteRecursoService;
+        public RecursoController(ICreateRecursoService createRecursoService, IGetRecursosService getRecursosService, IUpdateRecursoService updateRecursoService, IDeleteRecursoService deleteRecursoService)
         {
             _createRecursoService = createRecursoService;
             _getRecursosService = getRecursosService;
             _updateRecursoService = updateRecursoService;
+            _deleteRecursoService = deleteRecursoService;
         }
 
         [HttpPost]
@@ -38,6 +41,12 @@ namespace SistemReserva.API.Controllers
         {
             id = request.RecursoId;
             var result = await _updateRecursoService.UpdateRecursoAsync(request);
+            return Ok(result);
+        }
+        [HttpDelete]
+        public async Task<ActionResult<bool>> DeleteRecursoAsync([FromBody]int id)
+        {
+            var result = await _deleteRecursoService.DeleteRecursoAsync(id);
             return Ok(result);
         }
 

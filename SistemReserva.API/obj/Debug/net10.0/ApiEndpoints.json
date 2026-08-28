@@ -58,6 +58,32 @@
   },
   {
     "ContainingType": "SistemReserva.API.Controllers.RecursoController",
+    "Method": "DeleteRecursoAsync",
+    "RelativePath": "api/Recurso",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemReserva.API.Controllers.RecursoController",
     "Method": "UpdateRecursoAsync",
     "RelativePath": "api/Recurso/{id}",
     "HttpMethod": "PUT",

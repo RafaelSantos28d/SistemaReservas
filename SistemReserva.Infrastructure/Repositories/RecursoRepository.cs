@@ -37,10 +37,8 @@ namespace SistemReserva.Infrastructure.Repositories
             return recurso;
         }
 
-        public async Task<bool> RemoveAsync(int id)
+        public async Task<bool> RemoveAsync(Recurso recurso)
         {
-            var recurso = await GetByIdAsync(id);
-
             _context.Recursos.Remove(recurso);
             return true;
 

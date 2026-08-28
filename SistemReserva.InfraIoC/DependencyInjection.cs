@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using SistemaReserva.Application.Common;
 using SistemaReserva.Application.Recursos.CreateRecurso;
 using SistemaReserva.Application.Recursos.ListRecursos;
+using SistemReserva.Application.Recursos.DeleteRecurso;
 using SistemReserva.Application.Recursos.UpdateRecurso;
 using SistemReserva.Domain.Interfaces;
 using SistemReserva.Infrastructure.Context;
@@ -33,6 +34,7 @@ namespace SistemReserva.InfraIoC
             services.AddScoped<ICreateRecursoService, CreateRecursoService>();
             services.AddScoped<IGetRecursosService, GetRecursosServices>();
             services.AddScoped<IUpdateRecursoService, UpdateRecursoService>();
+            services.AddScoped<IDeleteRecursoService, DeleteRecursoService>();
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
