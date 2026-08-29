@@ -21,7 +21,7 @@ namespace SistemReserva.Infrastructure.Repositories
 
         public async Task<Recurso> CreateAsync(Recurso recurso)
         {
-            await _context.AddAsync(recurso);
+            await _context.Recursos.AddAsync(recurso);
             return recurso;
         }
 

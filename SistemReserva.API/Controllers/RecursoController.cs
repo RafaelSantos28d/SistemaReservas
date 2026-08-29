@@ -43,8 +43,8 @@ namespace SistemReserva.API.Controllers
             var result = await _updateRecursoService.UpdateRecursoAsync(request);
             return Ok(result);
         }
-        [HttpDelete]
-        public async Task<ActionResult<bool>> DeleteRecursoAsync([FromBody]int id)
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<bool>> DeleteRecursoAsync([FromRoute]int id)
         {
             var result = await _deleteRecursoService.DeleteRecursoAsync(id);
             return Ok(result);

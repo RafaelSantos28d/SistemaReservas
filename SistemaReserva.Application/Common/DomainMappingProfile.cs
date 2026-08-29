@@ -2,6 +2,7 @@
 using SistemaReserva.Application.Recursos.CreateRecurso;
 using SistemaReserva.Application.Recursos.ListRecursos;
 using SistemReserva.Application.Recursos.UpdateRecurso;
+using SistemReserva.Application.Reservas.CreateReserva;
 using SistemReserva.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,11 @@ namespace SistemaReserva.Application.Common
             CreateMap<CreateRecursoResponse, Recurso>().ReverseMap();
             CreateMap<GetRecursoResponse, Recurso>().ReverseMap();
             CreateMap<UpdateRecursoRequest,Recurso>().ReverseMap();
+
+            CreateMap<CreateReservaRequest, Reserva>().ReverseMap();
+            CreateMap<CreateReservaResponse, Reserva>().ReverseMap();
+
+
         }
     }
 }

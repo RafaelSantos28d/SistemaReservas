@@ -10,6 +10,7 @@ namespace SistemReserva.Infrastructure.Repositories
     {
         private readonly BancoContext _context;
         private IRecursoRepository _recursoRepository;
+        private IReservaRepository _reservaRepository;
         public UnitOfWork(BancoContext context)
         {
             _context = context;
@@ -19,6 +20,13 @@ namespace SistemReserva.Infrastructure.Repositories
             get
             {
                 return _recursoRepository = _recursoRepository ?? new RecursoRepository(_context);
+            }
+        }
+        public IReservaRepository ReservaRepository
+        {
+            get
+            {
+                return _reservaRepository = _reservaRepository ?? new ReservaRepository(_context);
             }
         }
 

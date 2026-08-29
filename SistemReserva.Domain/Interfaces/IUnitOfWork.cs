@@ -7,7 +7,7 @@ namespace SistemReserva.Domain.Interfaces
     public interface IUnitOfWork
     {
         IRecursoRepository RecursoRepository { get; }
-
+        IReservaRepository ReservaRepository { get; }
         Task CommitAync();
     }
 }

@@ -12,11 +12,12 @@ namespace SistemReserva.Domain.Entities
         {
             Validation(recursoId, descricao, userId, inicio, fim);
         }
-        public Reserva(int reservaId,int recursoId, string? descricao, string userId, DateTime inicio, DateTime fim)
+        public Reserva(int reservaId,int recursoId, string? descricao, string userId, DateTime inicio, DateTime fim,StatusReserva status)
         {
             DomainValidationException.When(reservaId < 0, "O id do recurso é obrigatório");
             ReservaId = reservaId;
             Validation(recursoId, descricao, userId, inicio, fim);
+            Status = status;
         }
         public Reserva()
         {
@@ -32,6 +33,16 @@ namespace SistemReserva.Domain.Entities
         public DateTime Fim { get; private set; }
         public StatusReserva Status { get; private set; }
 
+        public void Update(int reservaId,int recursoId,string descricao,string userId, DateTime inicio, DateTime fim, StatusReserva status)
+        {
+            ReservaId = reservaId; 
+            RecursoId = recursoId;
+            Descricao = descricao;
+            UserId = userId;
+            Inicio = inicio;
+            Fim = fim;
+            Status = status;
+        }
 
         public void Validation( int recursoId, string descricao, string userId, DateTime inicio, DateTime fim)
         {
