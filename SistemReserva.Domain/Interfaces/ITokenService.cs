@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SistemReserva.Infrastructure.Identity
+namespace SistemReserva.Domain.Interfaces
 {
     public interface ITokenService
     {

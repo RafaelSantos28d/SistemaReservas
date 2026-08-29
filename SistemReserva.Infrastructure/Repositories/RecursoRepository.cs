@@ -44,13 +44,7 @@ namespace SistemReserva.Infrastructure.Repositories
 
         }
 
-        public async Task<bool> UpdateAsync(Recurso recurso)
-        {
-            var update = await GetByIdAsync(recurso.RecursoId);
-
-            update.Update(recurso.RecursoId,recurso.Nome, recurso.Descricao, recurso.Ativo);
-            return true;
-        }
+        
     }
 }
 

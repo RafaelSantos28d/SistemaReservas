@@ -642,8 +642,7 @@
       "SistemReserva.Application/1.0.0": {
         "dependencies": {
           "AutoMapper": "16.2.0",
-          "SistemReserva.Domain": "1.0.0",
-          "SistemReserva.Infrastructure": "1.0.0"
+          "SistemReserva.Domain": "1.0.0"
         },
         "runtime": {
           "SistemReserva.Application.dll": {

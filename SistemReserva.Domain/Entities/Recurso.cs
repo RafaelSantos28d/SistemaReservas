@@ -20,14 +20,13 @@ namespace SistemReserva.Domain.Entities
         }
         public Recurso( string nome, string descricao, bool ativo)
         {
-            Validation(nome, descricao, ativo);
+            Validation(nome, descricao, ativo:true);
         }
         public Recurso()
         {
         }
-        public void Update(int id,string nome, string descricao, bool ativo)
+        public void Update(string nome, string descricao, bool ativo)
         {
-            RecursoId = id;
             Nome = nome;
             Descricao = descricao;
             Ativo = ativo;

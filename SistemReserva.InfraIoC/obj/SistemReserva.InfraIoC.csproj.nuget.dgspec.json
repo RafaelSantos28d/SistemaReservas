@@ -35,9 +35,6 @@
             "projectReferences": {
               "C:\\Users\\mique\\source\\repos\\SistemaReserva\\SistemReserva.Domain\\SistemReserva.Domain.csproj": {
                 "projectPath": "C:\\Users\\mique\\source\\repos\\SistemaReserva\\SistemReserva.Domain\\SistemReserva.Domain.csproj"
-              },
-              "C:\\Users\\mique\\source\\repos\\SistemaReserva\\SistemReserva.Infrastructure\\SistemReserva.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\mique\\source\\repos\\SistemaReserva\\SistemReserva.Infrastructure\\SistemReserva.Infrastructure.csproj"
               }
             }
           }

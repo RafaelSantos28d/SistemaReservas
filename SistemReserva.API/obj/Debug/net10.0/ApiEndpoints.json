@@ -190,7 +190,7 @@
   {
     "ContainingType": "SistemReserva.API.Controllers.ReservaController",
     "Method": "GetMinhasReservas",
-    "RelativePath": "api/Reserva/Minhas Reservas",
+    "RelativePath": "api/Reserva/minhas-reservas",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

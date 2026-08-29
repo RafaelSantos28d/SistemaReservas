@@ -12,7 +12,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SistemReserva.Domain\SistemReserva.Domain.csproj" />
-    <ProjectReference Include="..\SistemReserva.Infrastructure\SistemReserva.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>

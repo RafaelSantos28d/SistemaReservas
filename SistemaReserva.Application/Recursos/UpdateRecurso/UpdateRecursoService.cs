@@ -17,10 +17,12 @@ namespace SistemReserva.Application.Recursos.UpdateRecurso
             _mapper = mapper;
         }
 
-        public async Task<bool> UpdateRecursoAsync(UpdateRecursoRequest request)
+        public async Task<bool> UpdateRecursoAsync(int id,UpdateRecursoRequest request)
         {
-            var recurso =  _mapper.Map<Recurso>(request);
-            await _unitOfWork.RecursoRepository.UpdateAsync(recurso);
+            
+            var recurso =  await _unitOfWork.RecursoRepository.GetByIdAsync(id);
+            recurso.Update(request.Nome, request.Descricao,request.Ativo);
+           
             await _unitOfWork.CommitAync();
             return true;
         }

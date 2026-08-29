@@ -6,7 +6,6 @@ namespace SistemReserva.Application.Recursos.UpdateRecurso
 {
     public class UpdateRecursoRequest
     {
-        public int RecursoId { get; set; }
         public string Nome { get; set; }
         public string? Descricao { get; set; }
         public bool Ativo { get; set; }

@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
+using SistemReserva.Domain.Exceptions;
 using SistemReserva.Domain.Interfaces;
 using SistemReserva.Domain.Pagination;
-using SistemReserva.Infrastructure.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -22,7 +22,7 @@ namespace SistemReserva.Application.Reservas.GetReservaByEmail
         public async Task<PagedList<GetReservasByIdResponse>> GetMinhasReservas(string userId,int pageNumber,int pageSize)
         {
             var reservas = await _unitOfWork.ReservaRepository.GetReservasById(userId, pageNumber,pageSize);
-
+            
             var items = reservas.Items.Select(r => new GetReservasByIdResponse
             {
                 ReservaId = r.ReservaId,

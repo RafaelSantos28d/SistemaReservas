@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using SistemReserva.Domain.Entities;
 using SistemReserva.Domain.Interfaces;
-using SistemReserva.Infrastructure.Identity;
 using System;
 using System.Collections.Generic;
 using System.Text;

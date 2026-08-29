@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SistemReserva.Application.Reservas.CancelarReserva;
 using SistemReserva.Application.Reservas.CreateReserva;
@@ -8,6 +9,7 @@ using System.Security.Claims;
 
 namespace SistemReserva.API.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ReservaController : ControllerBase
@@ -31,7 +33,7 @@ namespace SistemReserva.API.Controllers
 
             return Ok(create);
         }
-        [HttpGet("Minhas Reservas")]
+        [HttpGet("minhas-reservas")]
         public async Task<ActionResult<PagedList<GetReservasByIdResponse>>> GetMinhasReservas(int pageNumber, int pagesize)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier)!;

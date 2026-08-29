@@ -11,7 +11,6 @@ namespace SistemReserva.Domain.Interfaces
         Task<PagedList<Recurso>> GetAllRecursoAsync(int currentPage, int pageSize);
         Task<Recurso> GetByIdAsync(int id);
         Task<Recurso> CreateAsync(Recurso recurso);
-        Task<bool> UpdateAsync(Recurso recurso);
         Task<bool> RemoveAsync(Recurso recurso);
     }
 }

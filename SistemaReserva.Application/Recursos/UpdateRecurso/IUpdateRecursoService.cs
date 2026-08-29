@@ -6,6 +6,6 @@ namespace SistemReserva.Application.Recursos.UpdateRecurso
 {
     public interface IUpdateRecursoService
     {
-        Task<bool> UpdateRecursoAsync(UpdateRecursoRequest request);
+        Task<bool> UpdateRecursoAsync(int id,UpdateRecursoRequest request);
     }
 }
