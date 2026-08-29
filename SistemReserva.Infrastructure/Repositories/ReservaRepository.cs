@@ -49,6 +49,12 @@ namespace SistemReserva.Infrastructure.Repositories
             return await _context.Reservas.FirstOrDefaultAsync(x=>x.ReservaId == id);
         }
 
+        public async Task<PagedList<Reserva>> GetReservasById(string userId,int pageNumber,int pageSize)
+        {
+            var query = _context.Reservas.Include(r => r.Recurso).Where(x => x.UserId == userId).OrderByDescending(r => r.Inicio);
+            return await PaginationHelper.CreateAsync(query,pageNumber,pageSize);
+        }
+
         public async Task<Reserva> UpdateReservaAsync(Reserva reserva)
         {
             var update = await GetReservaByIdAsync(reserva.ReservaId);

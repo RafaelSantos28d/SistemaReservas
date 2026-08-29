@@ -170,5 +170,36 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "SistemReserva.API.Controllers.ReservaController",
+    "Method": "GetReservasByEmail",
+    "RelativePath": "api/Reserva/Email",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pagesize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SistemReserva.Domain.Pagination.PagedList\u00601[[SistemReserva.Application.Reservas.GetReservaByEmail.GetReservasByIdResponse, SistemReserva.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

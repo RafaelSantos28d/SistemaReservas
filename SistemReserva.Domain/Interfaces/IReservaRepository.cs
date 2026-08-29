@@ -14,5 +14,6 @@ namespace SistemReserva.Domain.Interfaces
         Task<bool> Conflita(int recursoId, DateTime inicio, DateTime fim);
         Task<Reserva> UpdateReservaAsync(Reserva reserva);
         Task<bool> DeleteReservaAsync(Reserva reserva);
+        Task<PagedList<Reserva>> GetReservasById(string userId,int pageNumber,int pageSize);
     }
 }
