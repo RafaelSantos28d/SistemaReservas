@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using SistemReserva.Domain.Entities;
 using SistemReserva.Domain.Enums;
+using SistemReserva.Domain.Exceptions;
 using SistemReserva.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -25,11 +26,11 @@ namespace SistemReserva.Application.Reservas.CreateReserva
         {
             var recurso = await _unitOfWork.RecursoRepository.GetByIdAsync(request.RecursoId);
             if (recurso is null || !recurso.Ativo)
-                throw new InvalidOperationException("Recurso inválido ou inativo.");
+                throw new BadRequestException("Recurso inválido ou inativo.");
             var conflita = await _unitOfWork.ReservaRepository
                 .Conflita(request.RecursoId, request.Inicio, request.Fim);
             if (conflita)
-                throw new InvalidOperationException("Recurso já reservado nesse horário.");
+                throw new BadRequestException("Recurso já reservado nesse horário.");
 
             var reserva = new Reserva(
                     request.RecursoId,

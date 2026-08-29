@@ -39,6 +39,18 @@ namespace SistemReserva.API.Middleware
             {
                 await _next(context);
             }
+            catch (DomainValidationException ex)
+            {
+                await HandleExceptionAsync(context, ex, HttpStatusCode.BadRequest);
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                await HandleExceptionAsync(context, ex, HttpStatusCode.Forbidden);
+            }
+            catch (InvalidOperationException ex)
+            {
+                await HandleExceptionAsync(context, ex, HttpStatusCode.Conflict);
+            }
             catch (NotFoundException ex)
             {
                 await HandleExceptionAsync(context, ex, HttpStatusCode.NotFound);

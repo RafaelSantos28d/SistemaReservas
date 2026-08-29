@@ -37,6 +37,12 @@ namespace SistemReserva.Infrastructure.Repositories
             return recurso;
         }
 
+        public async Task<bool> PossuiReservasAsync(int recursoId)
+        {
+            
+            return await _context.Reservas.AnyAsync(x => x.RecursoId == recursoId);
+        }
+
         public async Task<bool> RemoveAsync(Recurso recurso)
         {
             _context.Recursos.Remove(recurso);

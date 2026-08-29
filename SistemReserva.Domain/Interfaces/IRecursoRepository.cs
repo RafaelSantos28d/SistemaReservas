@@ -12,5 +12,6 @@ namespace SistemReserva.Domain.Interfaces
         Task<Recurso> GetByIdAsync(int id);
         Task<Recurso> CreateAsync(Recurso recurso);
         Task<bool> RemoveAsync(Recurso recurso);
+        Task<bool> PossuiReservasAsync(int recursoId);
     }
 }
