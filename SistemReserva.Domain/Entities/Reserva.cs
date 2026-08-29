@@ -35,10 +35,8 @@ namespace SistemReserva.Domain.Entities
 
         public void Update(int reservaId,int recursoId,string descricao,string userId, DateTime inicio, DateTime fim, StatusReserva status)
         {
-            ReservaId = reservaId; 
-            RecursoId = recursoId;
+           
             Descricao = descricao;
-            UserId = userId;
             Inicio = inicio;
             Fim = fim;
             Status = status;
@@ -56,6 +54,10 @@ namespace SistemReserva.Domain.Entities
             Inicio = inicio;
             Fim = fim;
              
+        }
+        public void Cancelar()
+        {
+            Status = StatusReserva.Cancelada;
         }
     }
 }

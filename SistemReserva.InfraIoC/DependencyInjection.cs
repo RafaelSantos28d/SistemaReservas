@@ -12,6 +12,7 @@ using SistemReserva.Application.Auth.Login;
 using SistemReserva.Application.Auth.Register;
 using SistemReserva.Application.Recursos.DeleteRecurso;
 using SistemReserva.Application.Recursos.UpdateRecurso;
+using SistemReserva.Application.Reservas.CancelarReserva;
 using SistemReserva.Application.Reservas.CreateReserva;
 using SistemReserva.Application.Reservas.GetReservaByEmail;
 using SistemReserva.Domain.Entities;
@@ -73,7 +74,7 @@ namespace SistemReserva.InfraIoC
             services.AddScoped<IReservaRepository, ReservaRepository>();
             services.AddScoped<ICreateReservaService, CreateReservaService>();
             services.AddScoped<IGetReservasByIdService, GetReservasByIdService>();
-
+            services.AddScoped<ICancelarReservaService, CancelarReservaService>();
 
             //Auth
             services.AddScoped<IRegisterService, RegisterService>();

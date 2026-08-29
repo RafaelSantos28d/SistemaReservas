@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using SistemReserva.Domain.Entities;
 using SistemReserva.InfraIoC;
+using System.Text.Json.Serialization;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -12,6 +13,11 @@ builder.Services.AddOpenApi();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDataProtection();
 builder.Services.AddInfrastructureSwagger();
+builder.Services.AddControllers()
+            .AddJsonOptions(options =>
+            {
+                options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+            });
 var app = builder.Build();
 
 

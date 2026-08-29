@@ -16,7 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Reservas\DeleteReserva\" />
     <Folder Include="Reservas\UpdateReserva\" />
   </ItemGroup>
 

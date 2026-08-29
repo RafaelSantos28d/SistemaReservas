@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SistemReserva.Application.Reservas.CancelarReserva;
 using SistemReserva.Application.Reservas.CreateReserva;
 using SistemReserva.Application.Reservas.GetReservaByEmail;
 using SistemReserva.Domain.Pagination;
@@ -13,12 +14,13 @@ namespace SistemReserva.API.Controllers
     {
 
         private readonly ICreateReservaService _service;
-        private readonly IGetReservasByIdService _serviceByEmail;
-
-        public ReservaController(ICreateReservaService service, IGetReservasByIdService serviceByEmail)
+        private readonly IGetReservasByIdService _serviceById;
+        private readonly ICancelarReservaService _cancelarReserva;
+        public ReservaController(ICreateReservaService service, IGetReservasByIdService serviceByEmail, ICancelarReservaService cancelarReserva)
         {
             _service = service;
-            _serviceByEmail = serviceByEmail;
+            _serviceById = serviceByEmail;
+            _cancelarReserva = cancelarReserva;
         }
 
         [HttpPost]
@@ -29,12 +31,22 @@ namespace SistemReserva.API.Controllers
 
             return Ok(create);
         }
-        [HttpGet("Email")]
-        public async Task<ActionResult<PagedList<GetReservasByIdResponse>>> GetReservasByEmail(int pageNumber, int pagesize)
+        [HttpGet("Minhas Reservas")]
+        public async Task<ActionResult<PagedList<GetReservasByIdResponse>>> GetMinhasReservas(int pageNumber, int pagesize)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier)!;
-            var reservas = await _serviceByEmail.GetReservasByEmail(userId, pageNumber, pagesize);
+            var reservas = await _serviceById.GetMinhasReservas(userId, pageNumber, pagesize);
             return Ok(reservas);
+        }
+        [HttpPut("{id}/Cancelar")]
+        public async Task<ActionResult>CancelarReserva(int id)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier)!;
+            var isAdmin = User.IsInRole("Admin");
+
+            await _cancelarReserva.CancelarReserva(id, userId, isAdmin);
+
+            return NoContent();
         }
     }
 }

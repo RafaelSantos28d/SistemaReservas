@@ -19,7 +19,7 @@ namespace SistemReserva.Application.Reservas.GetReservaByEmail
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<PagedList<GetReservasByIdResponse>> GetReservasByEmail(string userId,int pageNumber,int pageSize)
+        public async Task<PagedList<GetReservasByIdResponse>> GetMinhasReservas(string userId,int pageNumber,int pageSize)
         {
             var reservas = await _unitOfWork.ReservaRepository.GetReservasById(userId, pageNumber,pageSize);
 

@@ -7,6 +7,6 @@ namespace SistemReserva.Application.Reservas.GetReservaByEmail
 {
     public interface IGetReservasByIdService
     {
-        Task<PagedList<GetReservasByIdResponse>> GetReservasByEmail(string userId,int pageNumber,int pageSize);
+        Task<PagedList<GetReservasByIdResponse>> GetMinhasReservas(string userId,int pageNumber,int pageSize);
     }
 }

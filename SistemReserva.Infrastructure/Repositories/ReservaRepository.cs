@@ -55,12 +55,9 @@ namespace SistemReserva.Infrastructure.Repositories
             return await PaginationHelper.CreateAsync(query,pageNumber,pageSize);
         }
 
-        public async Task<Reserva> UpdateReservaAsync(Reserva reserva)
+        public void Update(Reserva reserva)
         {
-            var update = await GetReservaByIdAsync(reserva.ReservaId);
-            update.Update(reserva.ReservaId, reserva.RecursoId,reserva.Descricao, reserva.UserId, reserva.Inicio, reserva.Fim, reserva.Status);
-
-            return update;
+            _context.Reservas.Update(reserva);
         }
     }
 }
