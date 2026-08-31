@@ -18,7 +18,7 @@ namespace SistemReserva.Application.Auth.Login
             _tokenService = tokenService;
         }
 
-        public async Task<LoginResponse> ExecuteAsync(LoginRequest request)
+        public async Task<LoginResponse> LoginAsync(LoginRequest request)
         {
             var usuario = await _userManager.FindByEmailAsync(request.Email)
             ?? throw new UnauthorizedAccessException("Credenciais inválidas.");

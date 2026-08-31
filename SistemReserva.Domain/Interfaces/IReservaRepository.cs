@@ -15,5 +15,6 @@ namespace SistemReserva.Domain.Interfaces
         void Update(Reserva reserva);
         Task<bool> DeleteReservaAsync(Reserva reserva);
         Task<PagedList<Reserva>> GetReservasById(string userId,int pageNumber,int pageSize);
+        Task<PagedList<Reserva>> GetAllComFiltroAsync(int? recursoId, string? userId, int currentPage, int pageSize);
     }
 }

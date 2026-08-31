@@ -38,6 +38,22 @@ namespace SistemReserva.Infrastructure.Repositories
             return true;
         }
 
+        public async Task<PagedList<Reserva>> GetAllComFiltroAsync(int? recursoId, string? userId, int currentPage, int pageSize)
+        {
+            var query = _context.Reservas.Include(r => r.Recurso).Include(r => r.User).AsQueryable();
+            if (recursoId.HasValue)
+            {
+                query = query.Where(r => r.RecursoId == recursoId.Value);
+            }
+                
+            if (!string.IsNullOrEmpty(userId))
+            {
+                query = query.Where(r => r.UserId == userId);
+            }
+               
+            return await PaginationHelper.CreateAsync(query.OrderByDescending(r => r.Inicio), currentPage, pageSize);
+        }
+
         public async Task<PagedList<Reserva>> GetAllReservasAsync(int pageNumber,int pageSize)
         {
             var query = _context.Reservas.Include(x => x.Recurso).Include(x => x.User);

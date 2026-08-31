@@ -33,7 +33,7 @@ namespace SistemReserva.Domain.Entities
         public DateTime Fim { get; private set; }
         public StatusReserva Status { get; private set; }
 
-        public void Update(int reservaId,int recursoId,string descricao,string userId, DateTime inicio, DateTime fim, StatusReserva status)
+        public void Update(string descricao, DateTime inicio, DateTime fim, StatusReserva status)
         {
            
             Descricao = descricao;

@@ -14,8 +14,4 @@
     <ProjectReference Include="..\SistemReserva.Domain\SistemReserva.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Reservas\UpdateReserva\" />
-  </ItemGroup>
-
 </Project>

@@ -20,25 +20,7 @@ builder.Services.AddControllers()
  options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
 });
 var app = builder.Build();
-using (var scope = app.Services.CreateScope())
-{
-    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-    
-    if (!await roleManager.RoleExistsAsync(Roles.Admin))
-    {
-        await roleManager.CreateAsync(new IdentityRole(Roles.Admin));
-    }
-}
-using (var scope = app.Services.CreateScope())
-{
-    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
-    var admin = await userManager.FindByEmailAsync("rafa@gmail.com");
 
-    if (admin is not null && !await userManager.IsInRoleAsync(admin, Roles.Admin))
-    {
-        await userManager.AddToRoleAsync(admin, Roles.Admin);
-    }
-}
 app.UseMiddleware<ExceptionMiddleware>();
 
 // Configure the HTTP request pipeline.

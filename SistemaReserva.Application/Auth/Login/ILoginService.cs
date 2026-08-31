@@ -6,6 +6,6 @@ namespace SistemReserva.Application.Auth.Login
 {
     public interface ILoginService
     {
-        Task<LoginResponse> ExecuteAsync(LoginRequest request);
+        Task<LoginResponse> LoginAsync(LoginRequest request);
     }
 }

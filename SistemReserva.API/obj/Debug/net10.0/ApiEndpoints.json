@@ -173,6 +173,47 @@
   },
   {
     "ContainingType": "SistemReserva.API.Controllers.ReservaController",
+    "Method": "GetAll",
+    "RelativePath": "api/Reserva",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "recursoId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SistemReserva.Domain.Pagination.PagedList\u00601[[SistemReserva.Application.Reservas.GetAllReservas.GetAllReservasResponse, SistemReserva.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemReserva.API.Controllers.ReservaController",
     "Method": "CancelarReserva",
     "RelativePath": "api/Reserva/{id}/Cancelar",
     "HttpMethod": "PUT",
@@ -190,7 +231,7 @@
   {
     "ContainingType": "SistemReserva.API.Controllers.ReservaController",
     "Method": "GetMinhasReservas",
-    "RelativePath": "api/Reserva/minhas-reservas",
+    "RelativePath": "api/Reserva/reservas",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

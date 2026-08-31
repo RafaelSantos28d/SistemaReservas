@@ -22,7 +22,10 @@ namespace SistemReserva.Application.Reservas.GetReservaByEmail
         public async Task<PagedList<GetReservasByIdResponse>> GetMinhasReservas(string userId,int pageNumber,int pageSize)
         {
             var reservas = await _unitOfWork.ReservaRepository.GetReservasById(userId, pageNumber,pageSize);
-            
+            if(reservas is null)
+            {
+                throw new NotFoundException("Nenhuma reserva encontrada");
+            }
             var items = reservas.Items.Select(r => new GetReservasByIdResponse
             {
                 ReservaId = r.ReservaId,

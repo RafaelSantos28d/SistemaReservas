@@ -10,11 +10,9 @@ namespace SistemReserva.Application.Recursos.UpdateRecurso
     public class UpdateRecursoService : IUpdateRecursoService
     {
         private readonly IUnitOfWork _unitOfWork;
-        private readonly IMapper _mapper;
-        public UpdateRecursoService(IUnitOfWork unitOfWork, IMapper mapper)
+        public UpdateRecursoService(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
-            _mapper = mapper;
         }
 
         public async Task<bool> UpdateRecursoAsync(int id,UpdateRecursoRequest request)
