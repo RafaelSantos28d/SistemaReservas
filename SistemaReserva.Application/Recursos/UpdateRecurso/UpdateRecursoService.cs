@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using SistemReserva.Domain.Entities;
+using SistemReserva.Domain.Exceptions;
 using SistemReserva.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,10 @@ namespace SistemReserva.Application.Recursos.UpdateRecurso
         {
             
             var recurso =  await _unitOfWork.RecursoRepository.GetByIdAsync(id);
+            if(recurso == null)
+            {
+                throw new NotFoundException("Recurso não encontrado");
+            }
             recurso.Update(request.Nome, request.Descricao,request.Ativo);
            
             await _unitOfWork.CommitAync();

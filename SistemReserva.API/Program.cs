@@ -24,15 +24,14 @@ var app = builder.Build();
 app.UseMiddleware<ExceptionMiddleware>();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+
+app.MapOpenApi();
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    app.MapOpenApi();
-    app.UseSwagger();
-    app.UseSwaggerUI(c =>
-    {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "Reservas v1");
-    });
-}
+});
+
 
 app.UseHttpsRedirection();
 
