@@ -45,8 +45,8 @@ namespace SistemReserva.Domain.Entities
         public void Validation( int recursoId, string descricao, string userId, DateTime inicio, DateTime fim)
         {
             DomainValidationException.When(string.IsNullOrEmpty(userId), "Id do usuário é obrigatório");
-            DomainValidationException.When(inicio < DateTime.Now, "Data inválida");
-            DomainValidationException.When(inicio > fim, "Data inválida");
+            DomainValidationException.When(inicio < DateTime.UtcNow, "Data inválida");
+            DomainValidationException.When(inicio >= fim, "Data inválida");
             DomainValidationException.When(recursoId < 0, "O id do recurso é obrigatório");
             RecursoId= recursoId;
             Descricao= descricao;

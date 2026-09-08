@@ -12,6 +12,6 @@ namespace SistemReserva.Application.Reservas.CreateReserva
         public string? Descricao { get;  set; }
         public DateTime Inicio { get;  set; }
         public DateTime Fim { get;  set; }
-        public StatusReserva Status { get;  set; }
+        
     }
 }

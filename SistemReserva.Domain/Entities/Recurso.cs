@@ -31,11 +31,11 @@ namespace SistemReserva.Domain.Entities
             Descricao = descricao;
             Ativo = ativo;
         }
-        public void Validation( string nome, string descricao, bool ativo)
+        public void Validation( string nome, string? descricao, bool ativo)
         {
-            
-            DomainValidationException.When(nome.Length > 250, "Nome digitado inválido");
+
             DomainValidationException.When(string.IsNullOrEmpty(nome), "O nome é obrigatório");
+            DomainValidationException.When(nome.Length > 250, "Nome digitado inválido");
 
             
             Nome = nome;

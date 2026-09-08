@@ -43,7 +43,7 @@ namespace SistemReserva.API.Middleware
             {
                 await HandleExceptionAsync(context, ex, HttpStatusCode.BadRequest);
             }
-            catch (UnauthorizedAccessException ex)
+            catch (ForbiddenException ex)
             {
                 await HandleExceptionAsync(context, ex, HttpStatusCode.Forbidden);
             }

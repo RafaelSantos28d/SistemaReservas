@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using SistemaReserva.Application.Recursos.CreateRecurso;
 using SistemaReserva.Application.Recursos.ListRecursos;
 using SistemReserva.Application.Recursos.DeleteRecurso;
+using SistemReserva.Application.Recursos.GetRecursoById;
 using SistemReserva.Application.Recursos.UpdateRecurso;
 using SistemReserva.Domain.Constants;
 using SistemReserva.Domain.Pagination;
@@ -18,19 +19,21 @@ namespace SistemReserva.API.Controllers
         private readonly IGetRecursosService _getRecursosService;
         private readonly IUpdateRecursoService _updateRecursoService;
         private readonly IDeleteRecursoService _deleteRecursoService;
-        public RecursoController(ICreateRecursoService createRecursoService, IGetRecursosService getRecursosService, IUpdateRecursoService updateRecursoService, IDeleteRecursoService deleteRecursoService)
+        private readonly IGetRecursoByIdService _getRecursoByIdService;
+        public RecursoController(ICreateRecursoService createRecursoService, IGetRecursosService getRecursosService, IUpdateRecursoService updateRecursoService, IDeleteRecursoService deleteRecursoService, IGetRecursoByIdService getRecursoByIdService)
         {
             _createRecursoService = createRecursoService;
             _getRecursosService = getRecursosService;
             _updateRecursoService = updateRecursoService;
             _deleteRecursoService = deleteRecursoService;
+            _getRecursoByIdService = getRecursoByIdService;
         }
         [Authorize(Roles = Roles.Admin)]
         [HttpPost]
         public async Task<ActionResult<CreateRecursoResponse>>CreateRecursoAsync(CreateRecursoRequest request)
         {
             var recurso = await _createRecursoService.CreateRecursoAsync(request);
-            return Ok(recurso);
+            return Created("Criado com Sucesso!", recurso);
         }
         [Authorize]
         [HttpGet]
@@ -53,6 +56,13 @@ namespace SistemReserva.API.Controllers
 
             var result = await _deleteRecursoService.DeleteRecursoAsync(id);
             return Ok(result);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<GetRecursoByIdResponse>> GetRecursoByIdAsync([FromRoute] int id)
+        {
+            var recurso = await _getRecursoByIdService.GetRecursoById(id);
+            return Ok(recurso);
         }
 
     }

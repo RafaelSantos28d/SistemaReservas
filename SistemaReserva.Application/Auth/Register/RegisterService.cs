@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.Win32;
 using SistemReserva.Domain.Entities;
+using SistemReserva.Domain.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -28,7 +29,7 @@ namespace SistemReserva.Application.Auth.Register
             if (!result.Succeeded)
             {
                 var erros = string.Join(", ", result.Errors.Select(e => e.Description));
-                throw new InvalidOperationException(erros);
+                throw new BadRequestException(erros);
             }
         }
     }

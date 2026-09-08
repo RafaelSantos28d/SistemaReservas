@@ -49,6 +49,7 @@ namespace SistemReserva.Application.Reservas.CreateReserva
             var response = _mapper.Map<CreateReservaResponse>(create);
             response.RecursoName = recurso.Nome;
             response.UserEmail = usuario.Email;
+            response.Status = StatusReserva.Confirmada;
             return response;
         }
     }
