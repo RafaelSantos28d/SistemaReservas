@@ -33,7 +33,7 @@ namespace SistemReserva.API.Controllers
         public async Task<ActionResult<CreateRecursoResponse>>CreateRecursoAsync(CreateRecursoRequest request)
         {
             var recurso = await _createRecursoService.CreateRecursoAsync(request);
-            return Created("Criado com Sucesso!", recurso);
+            return CreatedAtAction(nameof(GetRecursoByIdAsync),new { id= recurso.RecursoId }, recurso);
         }
         [Authorize]
         [HttpGet]

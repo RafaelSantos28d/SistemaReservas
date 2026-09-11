@@ -8,11 +8,11 @@ namespace SistemReserva.Domain.Entities
 {
     public class Reserva
     {
-        public Reserva(int recursoId, string? descricao, string userId, DateTime inicio, DateTime fim)
+        public Reserva(int recursoId, string? descricao, string userId, DateTimeOffset inicio, DateTimeOffset fim)
         {
             Validation(recursoId, descricao, userId, inicio, fim);
         }
-        public Reserva(int reservaId,int recursoId, string? descricao, string userId, DateTime inicio, DateTime fim,StatusReserva status)
+        public Reserva(int reservaId,int recursoId, string? descricao, string userId, DateTimeOffset inicio, DateTimeOffset fim,StatusReserva status)
         {
             DomainValidationException.When(reservaId < 0, "O id do recurso é obrigatório");
             ReservaId = reservaId;
@@ -29,11 +29,11 @@ namespace SistemReserva.Domain.Entities
         public string? Descricao { get; private set; }
         public string UserId { get; private set; }
         public ApplicationUser? User { get; private set; }
-        public DateTime Inicio { get; private set; }
-        public DateTime Fim { get; private set; }
+        public DateTimeOffset Inicio { get; private set; }
+        public DateTimeOffset Fim { get; private set; }
         public StatusReserva Status { get; private set; }
 
-        public void Update(string descricao, DateTime inicio, DateTime fim, StatusReserva status)
+        public void Update(string descricao, DateTimeOffset inicio, DateTimeOffset fim, StatusReserva status)
         {
            
             Descricao = descricao;
@@ -42,12 +42,12 @@ namespace SistemReserva.Domain.Entities
             Status = status;
         }
 
-        public void Validation( int recursoId, string descricao, string userId, DateTime inicio, DateTime fim)
+        public void Validation( int recursoId, string descricao, string userId, DateTimeOffset inicio, DateTimeOffset fim)
         {
             DomainValidationException.When(string.IsNullOrEmpty(userId), "Id do usuário é obrigatório");
-            DomainValidationException.When(inicio < DateTime.UtcNow, "Data inválida");
-            DomainValidationException.When(inicio >= fim, "Data inválida");
-            DomainValidationException.When(recursoId < 0, "O id do recurso é obrigatório");
+            DomainValidationException.When(inicio <= DateTimeOffset.UtcNow, "A data de início deve ser futura");
+            DomainValidationException.When(inicio >= fim, "A data de início deve ser anterior à data de fim");
+            DomainValidationException.When(recursoId <= 0, "O id do recurso é obrigatório");
             RecursoId= recursoId;
             Descricao= descricao;
             UserId = userId;

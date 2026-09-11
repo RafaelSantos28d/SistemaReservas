@@ -35,7 +35,7 @@ namespace SistemReserva.API.Controllers
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier)!;
             var create = await _service.CreateReservaAsync(request,userId);
 
-            return Ok(create);
+            return CreatedAtAction(nameof(GetMinhasReservas), new {id = userId},create);
         }
         [HttpGet("reservas")]
         public async Task<ActionResult<PagedList<GetReservasByIdResponse>>> GetMinhasReservas(int pageNumber, int pagesize)

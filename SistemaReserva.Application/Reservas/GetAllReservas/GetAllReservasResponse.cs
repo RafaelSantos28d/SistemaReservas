@@ -13,8 +13,8 @@ namespace SistemReserva.Application.Reservas.GetAllReservas
         public string? Descricao { get; set; }
         public string UserId { get; set; }
         public string UserEmail { get; set; }
-        public DateTime Inicio { get; set; }
-        public DateTime Fim { get; set; }
+        public DateTimeOffset Inicio { get; set; }
+        public DateTimeOffset Fim { get; set; }
         public StatusReserva Status { get; set; }
     }
 }

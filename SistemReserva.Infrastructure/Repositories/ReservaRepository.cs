@@ -21,7 +21,7 @@ namespace SistemReserva.Infrastructure.Repositories
             _context = context;
         }
 
-        public async Task<bool> Conflita(int recursoId, DateTime inicio, DateTime fim)
+        public async Task<bool> Conflita(int recursoId, DateTimeOffset inicio, DateTimeOffset fim)
         {
             return await _context.Reservas.Where( r=>r.RecursoId == recursoId && r.Status==StatusReserva.Confirmada && inicio < r.Fim && fim > r.Inicio).AnyAsync();
         }
