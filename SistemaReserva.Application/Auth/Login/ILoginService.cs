@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SistemReserva.Application.Auth.Login
+namespace SistemaReserva.Application.Auth.Login
 {
     public interface ILoginService
     {

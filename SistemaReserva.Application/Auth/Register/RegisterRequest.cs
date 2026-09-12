@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SistemReserva.Application.Auth.Register
+namespace SistemaReserva.Application.Auth.Register
 {
     public class RegisterRequest
     {

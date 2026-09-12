@@ -1,0 +1,79 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using SistemaReserva.Domain.Entities;
+using SistemaReserva.Domain.Enums;
+using SistemaReserva.Domain.Interfaces;
+using SistemaReserva.Domain.Pagination;
+using SistemaReserva.Infrastructure.Context;
+using SistemaReserva.Infrastructure.Helpers;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace SistemaReserva.Infrastructure.Repositories
+{
+    public class ReservaRepository : IReservaRepository
+    {
+        private readonly BancoContext _context;
+
+        public ReservaRepository(BancoContext context)
+        {
+            _context = context;
+        }
+
+        public async Task<bool> Conflita(int recursoId, DateTimeOffset inicio, DateTimeOffset fim)
+        {
+            return await _context.Reservas.Where( r=>r.RecursoId == recursoId && r.Status==StatusReserva.Confirmada && inicio < r.Fim && fim > r.Inicio).AnyAsync();
+        }
+
+        public async Task<Reserva> CreateReservaAsync(Reserva reserva)
+        {
+            await _context.Reservas.AddAsync( reserva );
+            return reserva;
+        }
+
+        public async Task<bool> DeleteReservaAsync(Reserva reserva)
+        {
+            _context.Reservas.Remove( reserva );
+            return true;
+        }
+
+        public async Task<PagedList<Reserva>> GetAllComFiltroAsync(int? recursoId, string? userId, int currentPage, int pageSize)
+        {
+            var query = _context.Reservas.Include(r => r.Recurso).Include(r => r.User).AsQueryable();
+            if (recursoId.HasValue)
+            {
+                query = query.Where(r => r.RecursoId == recursoId.Value);
+            }
+                
+            if (!string.IsNullOrEmpty(userId))
+            {
+                query = query.Where(r => r.UserId == userId);
+            }
+               
+            return await PaginationHelper.CreateAsync(query.OrderByDescending(r => r.Inicio), currentPage, pageSize);
+        }
+
+        public async Task<PagedList<Reserva>> GetAllReservasAsync(int pageNumber,int pageSize)
+        {
+            var query = _context.Reservas.Include(x => x.Recurso).Include(x => x.User);
+            return await PaginationHelper.CreateAsync(query, pageNumber, pageSize);
+        }
+
+        public async Task<Reserva> GetReservaByIdAsync(int id)
+        {
+            return await _context.Reservas.FirstOrDefaultAsync(x=>x.ReservaId == id);
+        }
+
+        public async Task<PagedList<Reserva>> GetReservasById(string userId,int pageNumber,int pageSize)
+        {
+            var query = _context.Reservas.Include(r => r.Recurso).Where(x => x.UserId == userId).OrderByDescending(r => r.Inicio);
+            return await PaginationHelper.CreateAsync(query,pageNumber,pageSize);
+        }
+
+        public void Update(Reserva reserva)
+        {
+            _context.Reservas.Update(reserva);
+        }
+    }
+}

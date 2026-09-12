@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
 using SistemaReserva.Application.Recursos.CreateRecurso;
 using SistemaReserva.Application.Recursos.ListRecursos;
-using SistemReserva.Application.Recursos.GetRecursoById;
-using SistemReserva.Application.Recursos.UpdateRecurso;
-using SistemReserva.Application.Reservas.CreateReserva;
-using SistemReserva.Domain.Entities;
+using SistemaReserva.Application.Recursos.GetRecursoById;
+using SistemaReserva.Application.Recursos.UpdateRecurso;
+using SistemaReserva.Application.Reservas.CreateReserva;
+using SistemaReserva.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;

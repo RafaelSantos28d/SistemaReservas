@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SistemReserva.Application.Recursos.UpdateRecurso
+namespace SistemaReserva.Application.Recursos.UpdateRecurso
 {
     public class UpdateRecursoRequest
     {

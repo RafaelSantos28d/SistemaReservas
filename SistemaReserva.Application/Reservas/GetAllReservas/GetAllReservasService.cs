@@ -1,10 +1,10 @@
-﻿using SistemReserva.Domain.Interfaces;
-using SistemReserva.Domain.Pagination;
+﻿using SistemaReserva.Domain.Interfaces;
+using SistemaReserva.Domain.Pagination;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SistemReserva.Application.Reservas.GetAllReservas
+namespace SistemaReserva.Application.Reservas.GetAllReservas
 {
     public class GetAllReservasService : IGetAllReservasService
     {

@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using SistemReserva.Domain.Entities;
-using SistemReserva.Domain.Interfaces;
+using SistemaReserva.Domain.Entities;
+using SistemaReserva.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;

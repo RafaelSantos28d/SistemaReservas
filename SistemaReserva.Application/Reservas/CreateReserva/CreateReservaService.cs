@@ -1,14 +1,14 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Identity;
-using SistemReserva.Domain.Entities;
-using SistemReserva.Domain.Enums;
-using SistemReserva.Domain.Exceptions;
-using SistemReserva.Domain.Interfaces;
+using SistemaReserva.Domain.Entities;
+using SistemaReserva.Domain.Enums;
+using SistemaReserva.Domain.Exceptions;
+using SistemaReserva.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SistemReserva.Application.Reservas.CreateReserva
+namespace SistemaReserva.Application.Reservas.CreateReserva
 {
     public class CreateReservaService : ICreateReservaService
     {

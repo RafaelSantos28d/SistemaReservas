@@ -1,9 +1,9 @@
-﻿using SistemReserva.Domain.Pagination;
+﻿using SistemaReserva.Domain.Pagination;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SistemReserva.Application.Reservas.GetReservaByEmail
+namespace SistemaReserva.Application.Reservas.GetReservaByEmail
 {
     public interface IGetReservasByIdService
     {

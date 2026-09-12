@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
-using SistemReserva.Application.Reservas.GetAllReservas;
-using SistemReserva.Domain.Exceptions;
-using SistemReserva.Domain.Interfaces;
+using SistemaReserva.Application.Reservas.GetAllReservas;
+using SistemaReserva.Domain.Exceptions;
+using SistemaReserva.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SistemReserva.Application.Recursos.GetRecursoById
+namespace SistemaReserva.Application.Recursos.GetRecursoById
 {
     public class GetRecursoByIdService :IGetRecursoByIdService
     {

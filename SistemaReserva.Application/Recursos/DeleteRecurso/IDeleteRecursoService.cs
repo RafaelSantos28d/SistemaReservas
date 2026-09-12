@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SistemReserva.Application.Recursos.DeleteRecurso
+namespace SistemaReserva.Application.Recursos.DeleteRecurso
 {
     public interface IDeleteRecursoService
     {

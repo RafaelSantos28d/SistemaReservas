@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
-using SistemReserva.Domain.Entities;
-using SistemReserva.Domain.Interfaces;
-using SistemReserva.Domain.Pagination;
+using SistemaReserva.Domain.Entities;
+using SistemaReserva.Domain.Interfaces;
+using SistemaReserva.Domain.Pagination;
 using System;
 using System.Collections.Generic;
 using System.Text;

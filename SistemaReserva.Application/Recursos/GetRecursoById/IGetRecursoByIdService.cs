@@ -1,9 +1,9 @@
-﻿using SistemReserva.Application.Reservas.GetAllReservas;
+﻿using SistemaReserva.Application.Reservas.GetAllReservas;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SistemReserva.Application.Recursos.GetRecursoById
+namespace SistemaReserva.Application.Recursos.GetRecursoById
 {
     public interface IGetRecursoByIdService
     {

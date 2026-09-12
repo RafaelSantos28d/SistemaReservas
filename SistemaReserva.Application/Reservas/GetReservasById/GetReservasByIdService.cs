@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
-using SistemReserva.Domain.Exceptions;
-using SistemReserva.Domain.Interfaces;
-using SistemReserva.Domain.Pagination;
+using SistemaReserva.Domain.Exceptions;
+using SistemaReserva.Domain.Interfaces;
+using SistemaReserva.Domain.Pagination;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SistemReserva.Application.Reservas.GetReservaByEmail
+namespace SistemaReserva.Application.Reservas.GetReservaByEmail
 {
     public class GetReservasByIdService : IGetReservasByIdService
     {

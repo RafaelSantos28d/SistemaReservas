@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.Win32;
-using SistemReserva.Domain.Entities;
-using SistemReserva.Domain.Exceptions;
+using SistemaReserva.Domain.Entities;
+using SistemaReserva.Domain.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SistemReserva.Application.Auth.Register
+namespace SistemaReserva.Application.Auth.Register
 {
     public class RegisterService : IRegisterService
     {

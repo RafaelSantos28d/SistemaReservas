@@ -1,10 +1,10 @@
-﻿using SistemReserva.Domain.Entities;
-using SistemReserva.Domain.Enums;
+﻿using SistemaReserva.Domain.Entities;
+using SistemaReserva.Domain.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SistemReserva.Application.Reservas.CreateReserva
+namespace SistemaReserva.Application.Reservas.CreateReserva
 {
     public class CreateReservaResponse
     {

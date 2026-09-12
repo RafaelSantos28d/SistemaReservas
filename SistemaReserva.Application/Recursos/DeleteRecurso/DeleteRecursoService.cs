@@ -1,10 +1,10 @@
-﻿using SistemReserva.Domain.Exceptions;
-using SistemReserva.Domain.Interfaces;
+﻿using SistemaReserva.Domain.Exceptions;
+using SistemaReserva.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SistemReserva.Application.Recursos.DeleteRecurso
+namespace SistemaReserva.Application.Recursos.DeleteRecurso
 {
     public class DeleteRecursoService : IDeleteRecursoService
     {

@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using SistemReserva.Domain.Entities;
-using SistemReserva.Domain.Interfaces;
+using SistemaReserva.Domain.Entities;
+using SistemaReserva.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SistemReserva.Application.Auth.Login
+namespace SistemaReserva.Application.Auth.Login
 {
     public class LoginService :ILoginService
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SistemReserva.Application.Recursos.GetRecursoById
+namespace SistemaReserva.Application.Recursos.GetRecursoById
 {
     public class GetRecursoByIdResponse
     {

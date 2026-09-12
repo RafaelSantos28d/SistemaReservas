@@ -1,11 +1,11 @@
-﻿using SistemReserva.Domain.Enums;
-using SistemReserva.Domain.Exceptions;
-using SistemReserva.Domain.Interfaces;
+﻿using SistemaReserva.Domain.Enums;
+using SistemaReserva.Domain.Exceptions;
+using SistemaReserva.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SistemReserva.Application.Reservas.CancelarReserva
+namespace SistemaReserva.Application.Reservas.CancelarReserva
 {
     public class CancelarReservaService : ICancelarReservaService
     {
