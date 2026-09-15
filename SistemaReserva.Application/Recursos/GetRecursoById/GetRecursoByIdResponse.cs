@@ -8,6 +8,6 @@ namespace SistemaReserva.Application.Recursos.GetRecursoById
     {
         public string Nome { get; set; }
         public string? Descricao { get; set; }
-        public bool Ativo { get; private set; }
+        public bool Ativo { get;  set; }
     }
 }

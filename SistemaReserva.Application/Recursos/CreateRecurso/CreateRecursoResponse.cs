@@ -10,7 +10,7 @@ namespace SistemaReserva.Application.Recursos.CreateRecurso
         public int RecursoId { get;  set; }
         public string Nome { get;  set; }
         public string? Descricao { get;  set; }
-        public bool Ativo { get; private set; }
+        public bool Ativo { get;  set; }
         public ICollection<Reserva>? Reservas { get;  set; }
     }
 }
