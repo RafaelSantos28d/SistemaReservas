@@ -51,11 +51,11 @@ namespace SistemaReserva.API.Controllers
         }
         [Authorize(Roles = Roles.Admin)]
         [HttpDelete("{id}")]
-        public async Task<ActionResult<bool>> DeleteRecursoAsync([FromRoute]int id)
+        public async Task<ActionResult> DeleteRecursoAsync([FromRoute]int id)
         {
 
             var result = await _deleteRecursoService.DeleteRecursoAsync(id);
-            return Ok(result);
+            return NoContent();
         }
 
         [HttpGet("{id}")]
