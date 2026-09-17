@@ -4,6 +4,7 @@ using SistemaReserva.Domain.Interfaces;
 using SistemaReserva.Domain.Pagination;
 using System;
 using System.Collections.Generic;
+using System.Security.Claims;
 using System.Text;
 
 namespace SistemaReserva.Application.Reservas.GetReservaByEmail
@@ -18,7 +19,7 @@ namespace SistemaReserva.Application.Reservas.GetReservaByEmail
             _mapper = mapper;
             _unitOfWork = unitOfWork;
         }
-
+        
         public async Task<PagedList<GetReservasByIdResponse>> GetMinhasReservas(string userId,int pageNumber,int pageSize)
         {
             var reservas = await _unitOfWork.ReservaRepository.GetReservasById(userId, pageNumber,pageSize);

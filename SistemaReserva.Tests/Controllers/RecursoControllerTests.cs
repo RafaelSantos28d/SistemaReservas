@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SistemaReserva.Tests.Controllers.RecursoControllerTests
+namespace SistemaReserva.Tests.Controllers
 {
     public class RecursoControllerTests
     {
