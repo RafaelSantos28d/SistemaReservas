@@ -1,5 +1,7 @@
+using Microsoft.EntityFrameworkCore;
 using SistemaReserva.API.Middleware;
 using SistemaReserva.InfraIoC;
+using SistemaReserva.Infrastructure.Context;
 using SistemaReserva.Infrastructure.Identity;
 using System.Text.Json.Serialization;
 var builder = WebApplication.CreateBuilder(args);
@@ -20,6 +22,10 @@ builder.Services.AddControllers()
 var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
+    var db = scope.ServiceProvider.GetRequiredService<BancoContext>();
+
+    await db.Database.MigrateAsync();
+
     await IdentitySeeder.SeedAsync(scope.ServiceProvider);
 }
 app.UseMiddleware<ExceptionMiddleware>();
