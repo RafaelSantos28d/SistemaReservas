@@ -57,7 +57,6 @@ namespace SistemaReserva.Tests.Services.ReservaService
                 Inicio = reservaRequest.Inicio,
                 Fim = reservaRequest.Fim,
                 Status = Domain.Enums.StatusReserva.Confirmada
-
             };
             var reserva = new Reserva(reservaRequest.RecursoId, reservaRequest.Descricao,userId,reservaRequest.Inicio, reservaRequest.Fim);
             _unitOfWorkMock

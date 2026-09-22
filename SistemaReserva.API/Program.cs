@@ -1,8 +1,6 @@
-using Microsoft.AspNetCore.Identity;
 using SistemaReserva.API.Middleware;
-using SistemaReserva.Domain.Constants;
-using SistemaReserva.Domain.Entities;
 using SistemaReserva.InfraIoC;
+using SistemaReserva.Infrastructure.Identity;
 using System.Text.Json.Serialization;
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,7 +18,10 @@ builder.Services.AddControllers()
  options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
 });
 var app = builder.Build();
-
+using (var scope = app.Services.CreateScope())
+{
+    await IdentitySeeder.SeedAsync(scope.ServiceProvider);
+}
 app.UseMiddleware<ExceptionMiddleware>();
 
 // Configure the HTTP request pipeline.

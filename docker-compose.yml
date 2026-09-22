@@ -1,0 +1,41 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    ports:
+      - "8080:8080"
+
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=mysql;Database=SistemaReserva;User=root;Password=${DB_PASSWORD}
+      - JWT__yAudience=${JWT_Audience}
+      - JWT__Issuer=${JWT_Issuer}
+      - JWT__SecretKey=${JWT_SecretKey}
+      - JWT__TokenValidityMinutes=${JWT_TokenValidtyMinutes}
+      - JWT__RefreshTokenValidityMinutes=${JWT_RefreshtokenValidityMinutes}
+
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+  mysql:
+    image: mysql:8.4
+
+    environment:
+      - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
+      - MYSQL_DATABASE=SistemaReserva
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+    healthcheck:
+      test: ["CMD", "mysqladmin","ping","-h","localhost","-u","root","-p${DB_PASSWORD}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  mysql_data:

@@ -30,10 +30,11 @@ namespace SistemaReserva.API.Controllers
         }
         [Authorize(Roles = Roles.Admin)]
         [HttpPost]
-        public async Task<ActionResult<CreateRecursoResponse>>CreateRecursoAsync(CreateRecursoRequest request)
+        public async Task<ActionResult<CreateRecursoResponse>> CreateRecursoAsync(CreateRecursoRequest request)
         {
             var recurso = await _createRecursoService.CreateRecursoAsync(request);
-            return CreatedAtAction(nameof(GetRecursoByIdAsync),new { id= recurso.RecursoId }, recurso);
+            
+            return CreatedAtRoute("GetRecursoByIdAsync", new { id = recurso.RecursoId }, recurso);
         }
         [Authorize]
         [HttpGet]
@@ -44,21 +45,21 @@ namespace SistemaReserva.API.Controllers
         }
         [Authorize(Roles = Roles.Admin)]
         [HttpPut("{id}")]
-        public async Task<ActionResult<bool>> UpdateRecursoAsync([FromRoute] int id,UpdateRecursoRequest request)
+        public async Task<ActionResult<bool>> UpdateRecursoAsync([FromRoute] int id, UpdateRecursoRequest request)
         {
-            var result = await _updateRecursoService.UpdateRecursoAsync(id,request);
+            var result = await _updateRecursoService.UpdateRecursoAsync(id, request);
             return Ok(result);
         }
         [Authorize(Roles = Roles.Admin)]
         [HttpDelete("{id}")]
-        public async Task<ActionResult> DeleteRecursoAsync([FromRoute]int id)
+        public async Task<ActionResult> DeleteRecursoAsync([FromRoute] int id)
         {
 
             var result = await _deleteRecursoService.DeleteRecursoAsync(id);
             return NoContent();
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}",Name ="GetRecursoByIdAsync")]
         public async Task<ActionResult<GetRecursoByIdResponse>> GetRecursoByIdAsync([FromRoute] int id)
         {
             var recurso = await _getRecursoByIdService.GetRecursoById(id);
