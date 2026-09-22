@@ -22,7 +22,7 @@ namespace SistemaReserva.Application.Reservas.CancelarReserva
             {
                 throw new NotFoundException("Reserva não encontrada");
             }
-            if (reserva.UserId != userId || !isAdmin)
+            if (reserva.UserId != userId && !isAdmin)
             {
                 throw new UnauthorizedAccessException("Você não tem permissão para cancelar esta reserva.");
             }
