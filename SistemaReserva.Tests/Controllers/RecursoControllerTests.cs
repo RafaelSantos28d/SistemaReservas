@@ -4,9 +4,8 @@ using SistemaReserva.API.Controllers;
 using SistemaReserva.Application.Recursos.CreateRecurso;
 using SistemaReserva.Application.Recursos.DeleteRecurso;
 using SistemaReserva.Application.Recursos.GetRecursoById;
-using SistemaReserva.Application.Recursos.ListRecursos;
+using SistemaReserva.Application.Recursos.GetRecursos;
 using SistemaReserva.Application.Recursos.UpdateRecurso;
-using SistemaReserva.Application.Reservas.GetAllReservas;
 using SistemaReserva.Domain.Pagination;
 using System;
 using System.Collections.Generic;
@@ -76,7 +75,7 @@ namespace SistemaReserva.Tests.Controllers
         public async Task GetRecurso_ShouldReturnOk()
         {
             //Assert
-            var recurso1 = new GetRecursoResponse()
+            var recurso1 = new GetRecursosResponse()
             {
                 RecursoId = 1,
                 Nome = "Quadra 2",
@@ -84,7 +83,7 @@ namespace SistemaReserva.Tests.Controllers
                 Ativo = true,
                 Reservas = null
             };
-            var recurso2 = new GetRecursoResponse()
+            var recurso2 = new GetRecursosResponse()
             {
                 RecursoId = 2,
                 Nome = "Quadra 3",
@@ -92,19 +91,19 @@ namespace SistemaReserva.Tests.Controllers
                 Ativo = true,
                 Reservas = null
             };
-            var expectedResult = new PagedList<GetRecursoResponse>(new[] { recurso1, recurso2 }, 1, 1, 2);
+            var expectedResult = new PagedList<GetRecursosResponse>(new[] { recurso1, recurso2 }, 1, 1, 2);
 
-            _getRecursosService.Setup(s=>s.GetListRecursosAsync(1,2)).ReturnsAsync(expectedResult);
+            _getRecursosService.Setup(s=>s.GetRecursosAsync(1,2)).ReturnsAsync(expectedResult);
 
             //Act
             var result = await _recursoControllerMock.Recursos(1, 2);
 
             //Assert
             var okResult = Assert.IsType<OkObjectResult>(result.Result);
-            var actualValue = Assert.IsType<PagedList<GetRecursoResponse>>(okResult.Value);
+            var actualValue = Assert.IsType<PagedList<GetRecursosResponse>>(okResult.Value);
 
             Assert.Equal(expectedResult, actualValue);
-            _getRecursosService.Verify(s => s.GetListRecursosAsync(1, 2), Times.Once);
+            _getRecursosService.Verify(s => s.GetRecursosAsync(1, 2), Times.Once);
 
         }
         [Fact]
@@ -118,7 +117,7 @@ namespace SistemaReserva.Tests.Controllers
                 Ativo = true,
             };
 
-            _getRecursoByIdService.Setup(s => s.GetRecursoById(1)).ReturnsAsync(expectedResult);
+            _getRecursoByIdService.Setup(s => s.GetRecursoByIdAsync(1)).ReturnsAsync(expectedResult);
 
             //Act
             var result = await _recursoControllerMock.GetRecursoByIdAsync(1);
@@ -128,7 +127,7 @@ namespace SistemaReserva.Tests.Controllers
             var actualValue = Assert.IsType<GetRecursoByIdResponse>(okResult.Value);
 
             Assert.Equal(actualValue, expectedResult);
-            _getRecursoByIdService.Verify(s=>s.GetRecursoById(1), Times.Once);
+            _getRecursoByIdService.Verify(s=>s.GetRecursoByIdAsync(1), Times.Once);
 
         }
 
@@ -136,7 +135,7 @@ namespace SistemaReserva.Tests.Controllers
         public async Task DeleteRecurso_ShouldReturnNoContent()
         {
             //Arrange
-            _deleteRecursoService.Setup(s => s.DeleteRecursoAsync(1)).ReturnsAsync(true);
+            _deleteRecursoService.Setup(s => s.DeleteRecurso(1)).ReturnsAsync(true);
 
             //Act
             var result = await _recursoControllerMock.DeleteRecursoAsync(1);
@@ -144,7 +143,7 @@ namespace SistemaReserva.Tests.Controllers
             //Assert
             Assert.IsType<NoContentResult>(result);
 
-            _deleteRecursoService.Verify(s => s.DeleteRecursoAsync(1), Times.Once);
+            _deleteRecursoService.Verify(s => s.DeleteRecurso(1), Times.Once);
 
         }
 

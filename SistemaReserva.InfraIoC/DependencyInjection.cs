@@ -7,7 +7,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using SistemaReserva.Application.Common;
 using SistemaReserva.Application.Recursos.CreateRecurso;
-using SistemaReserva.Application.Recursos.ListRecursos;
 using SistemaReserva.Application.Auth.Login;
 using SistemaReserva.Application.Auth.Register;
 using SistemaReserva.Application.Recursos.DeleteRecurso;
@@ -16,7 +15,6 @@ using SistemaReserva.Application.Recursos.UpdateRecurso;
 using SistemaReserva.Application.Reservas.CancelarReserva;
 using SistemaReserva.Application.Reservas.CreateReserva;
 using SistemaReserva.Application.Reservas.GetAllReservas;
-using SistemaReserva.Application.Reservas.GetReservaById;
 using SistemaReserva.Domain.Entities;
 using SistemaReserva.Domain.Interfaces;
 using SistemaReserva.Infrastructure.Context;
@@ -25,6 +23,8 @@ using SistemaReserva.Infrastructure.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using SistemaReserva.Application.Recursos.GetRecursos;
+using SistemaReserva.Application.Reservas.GetMinhasReservas;
 
 
 namespace SistemaReserva.InfraIoC
@@ -68,7 +68,7 @@ namespace SistemaReserva.InfraIoC
 
             services.AddScoped<IRecursoRepository, RecursoRepository>();
             services.AddScoped<ICreateRecursoService, CreateRecursoService>();
-            services.AddScoped<IGetRecursosService, GetRecursosServices>();
+            services.AddScoped<IGetRecursosService, GetRecursosService>();
             services.AddScoped<IUpdateRecursoService, UpdateRecursoService>();
             services.AddScoped<IDeleteRecursoService, DeleteRecursoService>();
             services.AddScoped<IGetRecursoByIdService, GetRecursoByIdService>();
@@ -76,7 +76,7 @@ namespace SistemaReserva.InfraIoC
             //Reserva
             services.AddScoped<IReservaRepository, ReservaRepository>();
             services.AddScoped<ICreateReservaService, CreateReservaService>();
-            services.AddScoped<IGetReservasByIdService, GetReservasByIdService>();
+            services.AddScoped<IGetMinhasReservasService, GetMinhasReservasService>();
             services.AddScoped<ICancelarReservaService, CancelarReservaService>();
             services.AddScoped<IGetAllReservasService, GetAllReservasService>();
             //Auth

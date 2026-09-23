@@ -13,8 +13,8 @@ namespace SistemaReserva.Domain.Interfaces
         Task<Reserva> CreateReservaAsync(Reserva reserva);
         Task<bool> Conflita(int recursoId, DateTimeOffset inicio, DateTimeOffset fim);
         void Update(Reserva reserva);
-        Task<bool> DeleteReservaAsync(Reserva reserva);
-        Task<PagedList<Reserva>> GetReservasById(string userId,int pageNumber,int pageSize);
+        Task<bool> DeleteReserva(Reserva reserva);
+        Task<PagedList<Reserva>> GetReservasByUserIdAsync(string userId,int pageNumber,int pageSize);
         Task<PagedList<Reserva>> GetAllComFiltroAsync(int? recursoId, string? userId, int currentPage, int pageSize);
     }
 }

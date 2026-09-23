@@ -8,6 +8,6 @@ namespace SistemaReserva.Domain.Interfaces
     {
         IRecursoRepository RecursoRepository { get; }
         IReservaRepository ReservaRepository { get; }
-        Task CommitAync();
+        Task CommitAsync();
     }
 }

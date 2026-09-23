@@ -74,7 +74,7 @@ namespace SistemaReserva.Tests.Services.ReservaService
                 .ReturnsAsync(reserva);
 
             _unitOfWorkMock
-                .Setup(x => x.CommitAync())
+                .Setup(x => x.CommitAsync())
                 .Returns(Task.CompletedTask);
 
             _userManagerMock

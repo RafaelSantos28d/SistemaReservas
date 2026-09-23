@@ -42,7 +42,7 @@ namespace SistemaReserva.Application.Reservas.CreateReserva
 
 
             var create = await _unitOfWork.ReservaRepository.CreateReservaAsync(reserva);
-            await _unitOfWork.CommitAync();
+            await _unitOfWork.CommitAsync();
 
             var usuario = await _userManager.FindByIdAsync(userId);
 

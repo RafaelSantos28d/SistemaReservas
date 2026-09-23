@@ -2,9 +2,9 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SistemaReserva.Application.Recursos.CreateRecurso;
-using SistemaReserva.Application.Recursos.ListRecursos;
 using SistemaReserva.Application.Recursos.DeleteRecurso;
 using SistemaReserva.Application.Recursos.GetRecursoById;
+using SistemaReserva.Application.Recursos.GetRecursos;
 using SistemaReserva.Application.Recursos.UpdateRecurso;
 using SistemaReserva.Domain.Constants;
 using SistemaReserva.Domain.Pagination;
@@ -38,9 +38,9 @@ namespace SistemaReserva.API.Controllers
         }
         [Authorize]
         [HttpGet]
-        public async Task<ActionResult<PagedList<GetRecursoResponse>>> Recursos(int page, int pageSize)
+        public async Task<ActionResult<PagedList<GetRecursosResponse>>> Recursos(int page, int pageSize)
         {
-            var recursos = await _getRecursosService.GetListRecursosAsync(page, pageSize);
+            var recursos = await _getRecursosService.GetRecursosAsync(page, pageSize);
             return Ok(recursos);
         }
         [Authorize(Roles = Roles.Admin)]
@@ -55,14 +55,14 @@ namespace SistemaReserva.API.Controllers
         public async Task<ActionResult> DeleteRecursoAsync([FromRoute] int id)
         {
 
-            var result = await _deleteRecursoService.DeleteRecursoAsync(id);
+            var result = await _deleteRecursoService.DeleteRecurso(id);
             return NoContent();
         }
         [Authorize]
         [HttpGet("{id}",Name ="GetRecursoByIdAsync")]
         public async Task<ActionResult<GetRecursoByIdResponse>> GetRecursoByIdAsync([FromRoute] int id)
         {
-            var recurso = await _getRecursoByIdService.GetRecursoById(id);
+            var recurso = await _getRecursoByIdService.GetRecursoByIdAsync(id);
             return Ok(recurso);
         }
 

@@ -30,7 +30,7 @@ namespace SistemaReserva.Infrastructure.Repositories
             }
         }
 
-        public async Task CommitAync()
+        public async Task CommitAsync()
         {
             await _context.SaveChangesAsync();
         }

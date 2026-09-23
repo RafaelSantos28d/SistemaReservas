@@ -32,7 +32,7 @@ namespace SistemaReserva.Infrastructure.Repositories
             return reserva;
         }
 
-        public async Task<bool> DeleteReservaAsync(Reserva reserva)
+        public async Task<bool> DeleteReserva(Reserva reserva)
         {
             _context.Reservas.Remove( reserva );
             return true;
@@ -65,7 +65,7 @@ namespace SistemaReserva.Infrastructure.Repositories
             return await _context.Reservas.FirstOrDefaultAsync(x=>x.ReservaId == id);
         }
 
-        public async Task<PagedList<Reserva>> GetReservasById(string userId,int pageNumber,int pageSize)
+        public async Task<PagedList<Reserva>> GetReservasByUserIdAsync(string userId,int pageNumber,int pageSize)
         {
             var query = _context.Reservas.Include(r => r.Recurso).Where(x => x.UserId == userId).OrderByDescending(r => r.Inicio);
             return await PaginationHelper.CreateAsync(query,pageNumber,pageSize);

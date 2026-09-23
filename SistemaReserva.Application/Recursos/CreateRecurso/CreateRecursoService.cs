@@ -10,19 +10,19 @@ namespace SistemaReserva.Application.Recursos.CreateRecurso
     public class CreateRecursoService : ICreateRecursoService
     {
         private readonly IMapper _mapper;
-        private readonly IUnitOfWork _unityOfWork;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public CreateRecursoService(IUnitOfWork unityOfWork, IMapper mapper)
+        public CreateRecursoService(IUnitOfWork unitOfWork, IMapper mapper)
         {
-            _unityOfWork = unityOfWork;
+            _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
 
         public async Task<CreateRecursoResponse> CreateRecursoAsync(CreateRecursoRequest request)
         {
             var create = new Recurso(request.Nome, request.Descricao, ativo: true);
-            var created = await _unityOfWork.RecursoRepository.CreateAsync(create);
-            await _unityOfWork.CommitAync();
+            var created = await _unitOfWork.RecursoRepository.CreateAsync(create);
+            await _unitOfWork.CommitAsync();
             return _mapper.Map<CreateRecursoResponse>(created);
         }
     }

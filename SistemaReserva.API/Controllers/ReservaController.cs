@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using SistemaReserva.Application.Reservas.CancelarReserva;
 using SistemaReserva.Application.Reservas.CreateReserva;
 using SistemaReserva.Application.Reservas.GetAllReservas;
-using SistemaReserva.Application.Reservas.GetReservaById;
+using SistemaReserva.Application.Reservas.GetMinhasReservas;
 using SistemaReserva.Domain.Constants;
 using SistemaReserva.Domain.Pagination;
 using System.Security.Claims;
@@ -18,13 +18,13 @@ namespace SistemaReserva.API.Controllers
     {
 
         private readonly ICreateReservaService _service;
-        private readonly IGetReservasByIdService _serviceById;
+        private readonly IGetMinhasReservasService _getMinhasReservasService;
         private readonly ICancelarReservaService _cancelarReserva;
         private readonly IGetAllReservasService _getAllReservasService;
-        public ReservaController(ICreateReservaService service, IGetReservasByIdService serviceByEmail, ICancelarReservaService cancelarReserva, IGetAllReservasService getAllReservasService)
+        public ReservaController(ICreateReservaService service, IGetMinhasReservasService getMinhasReservasService, ICancelarReservaService cancelarReserva, IGetAllReservasService getAllReservasService)
         {
             _service = service;
-            _serviceById = serviceByEmail;
+            _getMinhasReservasService = getMinhasReservasService;
             _cancelarReserva = cancelarReserva;
             _getAllReservasService = getAllReservasService;
         }
@@ -38,10 +38,10 @@ namespace SistemaReserva.API.Controllers
             return CreatedAtAction(nameof(GetMinhasReservas), new {id = userId},create);
         }
         [HttpGet("minhas-reservas")]
-        public async Task<ActionResult<PagedList<GetReservasByIdResponse>>> GetMinhasReservas(int pageNumber, int pagesize)
+        public async Task<ActionResult<PagedList<GetMinhasReservasResponse>>> GetMinhasReservas(int pageNumber, int pageSize)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier)!;
-            var reservas = await _serviceById.GetMinhasReservas(userId, pageNumber, pagesize);
+            var reservas = await _getMinhasReservasService.GetMinhasReservas(userId, pageNumber, pageSize);
             return Ok(reservas);
         }
         [HttpPut("{id}/Cancelar")]

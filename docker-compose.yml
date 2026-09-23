@@ -10,7 +10,7 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ConnectionStrings__DefaultConnection=Server=mysql;Database=SistemaReserva;User=root;Password=${DB_PASSWORD}
-      - JWT__yAudience=${JWT_Audience}
+      - JWT__Audience=${JWT_Audience}
       - JWT__Issuer=${JWT_Issuer}
       - JWT__SecretKey=${JWT_SecretKey}
       - JWT__TokenValidityMinutes=${JWT_TokenValidtyMinutes}

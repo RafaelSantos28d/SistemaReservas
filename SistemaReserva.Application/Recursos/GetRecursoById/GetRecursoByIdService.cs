@@ -19,7 +19,7 @@ namespace SistemaReserva.Application.Recursos.GetRecursoById
             _mapper = mapper;
         }
 
-        public async Task<GetRecursoByIdResponse> GetRecursoById(int recursoId)
+        public async Task<GetRecursoByIdResponse> GetRecursoByIdAsync(int recursoId)
         {
             var recurso = await _recursoRepository.GetByIdAsync(recursoId);
 

@@ -2,32 +2,29 @@
 using SistemaReserva.Domain.Exceptions;
 using SistemaReserva.Domain.Interfaces;
 using SistemaReserva.Domain.Pagination;
-using System;
-using System.Collections.Generic;
-using System.Security.Claims;
-using System.Text;
 
-namespace SistemaReserva.Application.Reservas.GetReservaById
+
+namespace SistemaReserva.Application.Reservas.GetMinhasReservas
 {
-    public class GetReservasByIdService : IGetReservasByIdService
+    public class GetMinhasReservasService : IGetMinhasReservasService
     {
         private readonly IMapper _mapper;
         private readonly IUnitOfWork _unitOfWork;
 
-        public GetReservasByIdService(IMapper mapper, IUnitOfWork unitOfWork)
+        public GetMinhasReservasService(IMapper mapper, IUnitOfWork unitOfWork)
         {
             _mapper = mapper;
             _unitOfWork = unitOfWork;
         }
         
-        public async Task<PagedList<GetReservasByIdResponse>> GetMinhasReservas(string userId,int pageNumber,int pageSize)
+        public async Task<PagedList<GetMinhasReservasResponse>> GetMinhasReservas(string userId,int pageNumber,int pageSize)
         {
-            var reservas = await _unitOfWork.ReservaRepository.GetReservasById(userId, pageNumber,pageSize);
+            var reservas = await _unitOfWork.ReservaRepository.GetReservasByUserIdAsync(userId, pageNumber,pageSize);
             if(reservas is null)
             {
                 throw new NotFoundException("Nenhuma reserva encontrada");
             }
-            var items = reservas.Items.Select(r => new GetReservasByIdResponse
+            var items = reservas.Items.Select(r => new GetMinhasReservasResponse
             {
                 ReservaId = r.ReservaId,
                 RecursoId = r.RecursoId,
@@ -38,7 +35,7 @@ namespace SistemaReserva.Application.Reservas.GetReservaById
                 Status = r.Status
             }).ToList();
 
-            return new PagedList<GetReservasByIdResponse>(items, pageNumber,pageSize, reservas.TotalCount);
+            return new PagedList<GetMinhasReservasResponse>(items, pageNumber,pageSize, reservas.TotalCount);
         }
     }
 }

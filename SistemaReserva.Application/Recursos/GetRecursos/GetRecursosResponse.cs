@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SistemaReserva.Application.Recursos.ListRecursos
+namespace SistemaReserva.Application.Recursos.GetRecursos
 {
-    public class GetRecursoResponse
+    public class GetRecursosResponse
     {
         public int RecursoId { get; set; }
         public string Nome { get; set; }

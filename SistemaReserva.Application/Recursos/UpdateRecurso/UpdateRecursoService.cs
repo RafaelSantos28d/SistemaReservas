@@ -26,7 +26,7 @@ namespace SistemaReserva.Application.Recursos.UpdateRecurso
             }
             recurso.Update(request.Nome, request.Descricao,request.Ativo);
            
-            await _unitOfWork.CommitAync();
+            await _unitOfWork.CommitAsync();
             return true;
         }
     }

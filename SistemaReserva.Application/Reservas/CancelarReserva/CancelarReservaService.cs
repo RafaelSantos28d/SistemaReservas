@@ -31,12 +31,12 @@ namespace SistemaReserva.Application.Reservas.CancelarReserva
             {
                 throw new BadRequestException("Esta reserva já está cancelada.");
             }
-            if (reserva.Fim < DateTimeOffset.Now)
+            if (reserva.Fim < DateTimeOffset.UtcNow)
             {
                 throw new BadRequestException("Não é possível cancelar uma reserva que já ocorreu.");
             }
             reserva.Cancelar();
-            await _unitOfWork.CommitAync();
+            await _unitOfWork.CommitAsync();
         }
     }
 }

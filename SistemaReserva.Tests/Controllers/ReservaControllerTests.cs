@@ -5,7 +5,7 @@ using SistemaReserva.API.Controllers;
 using SistemaReserva.Application.Reservas.CancelarReserva;
 using SistemaReserva.Application.Reservas.CreateReserva;
 using SistemaReserva.Application.Reservas.GetAllReservas;
-using SistemaReserva.Application.Reservas.GetReservaById;
+using SistemaReserva.Application.Reservas.GetMinhasReservas;
 using SistemaReserva.Domain.Pagination;
 using System.Security.Claims;
 
@@ -18,7 +18,7 @@ namespace SistemaReserva.Tests.Controllers
         private readonly Mock<ICreateReservaService> _createReservaService;
         private readonly Mock<ICancelarReservaService> _cancelarReservaService;
         private readonly Mock<IGetAllReservasService> _getAllReservasService;
-        private readonly Mock<IGetReservasByIdService> _getByIdReservaService;
+        private readonly Mock<IGetMinhasReservasService> _getByIdReservaService;
         private readonly ReservaController _reservaController;
 
         public ReservaControllerTests()
@@ -26,7 +26,7 @@ namespace SistemaReserva.Tests.Controllers
             _createReservaService = new Mock<ICreateReservaService>();
             _cancelarReservaService = new Mock<ICancelarReservaService>();
             _getAllReservasService = new Mock<IGetAllReservasService>();
-            _getByIdReservaService = new Mock<IGetReservasByIdService>();
+            _getByIdReservaService = new Mock<IGetMinhasReservasService>();
             _reservaController = new ReservaController(_createReservaService.Object,
                                                        _getByIdReservaService.Object,
                                                        _cancelarReservaService.Object,
@@ -96,7 +96,7 @@ namespace SistemaReserva.Tests.Controllers
         {
             //Arrange
             var userId = "1";
-            var reserva1 = new GetReservasByIdResponse()
+            var reserva1 = new GetMinhasReservasResponse()
             {
                 ReservaId = 1,
                 RecursoId = 1,
@@ -106,7 +106,7 @@ namespace SistemaReserva.Tests.Controllers
                 Fim = DateTimeOffset.Now.AddDays(1).AddHours(1),
                 Status = Domain.Enums.StatusReserva.Confirmada
             };
-            var reserva2 = new GetReservasByIdResponse()
+            var reserva2 = new GetMinhasReservasResponse()
             {
                 ReservaId = 1,
                 RecursoId = 1,
@@ -116,7 +116,7 @@ namespace SistemaReserva.Tests.Controllers
                 Fim = DateTimeOffset.Now.AddDays(1).AddHours(3),
                 Status = Domain.Enums.StatusReserva.Confirmada
             };
-            var expectedResult = new PagedList<GetReservasByIdResponse>(new[] {reserva1, reserva2 },1,2,2);
+            var expectedResult = new PagedList<GetMinhasReservasResponse>(new[] {reserva1, reserva2 },1,2,2);
             _reservaController.ControllerContext = new ControllerContext
             {
                 HttpContext = new DefaultHttpContext { User = CriarUsuarioFake(userId,isAdmin:true) }
@@ -129,7 +129,7 @@ namespace SistemaReserva.Tests.Controllers
 
             //Assert
             var okResult = Assert.IsType<OkObjectResult>(result.Result);
-            var actualValue = Assert.IsType<PagedList<GetReservasByIdResponse>>(okResult.Value);
+            var actualValue = Assert.IsType<PagedList<GetMinhasReservasResponse>>(okResult.Value);
 
             Assert.Equal(expectedResult,actualValue);
             _getByIdReservaService.Verify(s=>s.GetMinhasReservas(userId,1,2), Times.Once());

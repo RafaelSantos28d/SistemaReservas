@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SistemaReserva.Application.Reservas.GetReservaById
+namespace SistemaReserva.Application.Reservas.GetMinhasReservas
 {
-    public class GetReservasByIdResponse
+    public class GetMinhasReservasResponse
     {
         public int ReservaId { get; set; }
         public int RecursoId { get; set; }

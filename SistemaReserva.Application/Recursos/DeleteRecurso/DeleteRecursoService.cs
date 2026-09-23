@@ -15,7 +15,7 @@ namespace SistemaReserva.Application.Recursos.DeleteRecurso
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<bool> DeleteRecursoAsync(int id)
+        public async Task<bool> DeleteRecurso(int id)
         {
             var recurso = await _unitOfWork.RecursoRepository.GetByIdAsync(id);
             if (recurso == null)
@@ -27,8 +27,8 @@ namespace SistemaReserva.Application.Recursos.DeleteRecurso
             {
                 throw new BadRequestException("Não é possível excluir um recurso com reservas vinculadas.");
             }
-            await _unitOfWork.RecursoRepository.RemoveAsync(recurso);
-            await _unitOfWork.CommitAync();
+            await _unitOfWork.RecursoRepository.Remove(recurso);
+            await _unitOfWork.CommitAsync();
             return true;
         }
     }

@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using SistemaReserva.Application.Recursos.CreateRecurso;
-using SistemaReserva.Application.Recursos.ListRecursos;
 using SistemaReserva.Application.Recursos.GetRecursoById;
+using SistemaReserva.Application.Recursos.GetRecursos;
 using SistemaReserva.Application.Recursos.UpdateRecurso;
 using SistemaReserva.Application.Reservas.CreateReserva;
 using SistemaReserva.Domain.Entities;
@@ -17,7 +17,7 @@ namespace SistemaReserva.Application.Common
         {
             CreateMap<CreateRecursoRequest, Recurso>().ReverseMap();
             CreateMap<CreateRecursoResponse, Recurso>().ReverseMap();
-            CreateMap<GetRecursoResponse, Recurso>().ReverseMap();
+            CreateMap<GetRecursosResponse, Recurso>().ReverseMap();
             CreateMap<UpdateRecursoRequest,Recurso>().ReverseMap();
             CreateMap<GetRecursoByIdResponse, Recurso>().ReverseMap();
 

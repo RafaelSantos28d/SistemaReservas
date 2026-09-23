@@ -6,6 +6,6 @@ namespace SistemaReserva.Application.Recursos.DeleteRecurso
 {
     public interface IDeleteRecursoService
     {
-        Task<bool> DeleteRecursoAsync(int id);
+        Task<bool> DeleteRecurso(int id);
     }
 }

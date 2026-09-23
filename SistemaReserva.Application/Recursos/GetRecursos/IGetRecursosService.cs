@@ -3,10 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SistemaReserva.Application.Recursos.ListRecursos
+namespace SistemaReserva.Application.Recursos.GetRecursos
 {
     public interface IGetRecursosService
     {
-        Task<PagedList<GetRecursoResponse>> GetListRecursosAsync(int currentPage, int pageSize);
+        Task<PagedList<GetRecursosResponse>> GetRecursosAsync(int currentPage, int pageSize);
     }
 }
