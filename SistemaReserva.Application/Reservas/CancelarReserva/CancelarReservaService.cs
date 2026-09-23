@@ -24,7 +24,7 @@ namespace SistemaReserva.Application.Reservas.CancelarReserva
             }
             if (reserva.UserId != userId && !isAdmin)
             {
-                throw new UnauthorizedAccessException("Você não tem permissão para cancelar esta reserva.");
+                throw new ForbiddenException("Você não tem permissão para cancelar esta reserva.");
             }
                 
             if (reserva.Status == StatusReserva.Cancelada)
