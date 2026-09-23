@@ -25,7 +25,7 @@ namespace SistemaReserva.Domain.Pagination
         public void Validation(int currentPage, int pageSize)
         {
             DomainValidationException.When(currentPage < 1, "A página deve ser maior que 0");
-            DomainValidationException.When(pageSize > 50, "O tamanho da página deve ser maior que 0 no máximo 50");
+            DomainValidationException.When( pageSize <1 || pageSize > 50, "O tamanho da página deve estar entre 1 e 50");
         }
     }
 }
