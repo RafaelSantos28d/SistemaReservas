@@ -31,7 +31,7 @@ namespace SistemaReserva.Application.Reservas.CancelarReserva
             {
                 throw new BadRequestException("Esta reserva já está cancelada.");
             }
-            if (reserva.Fim < DateTime.Now)
+            if (reserva.Fim < DateTimeOffset.Now)
             {
                 throw new BadRequestException("Não é possível cancelar uma reserva que já ocorreu.");
             }
