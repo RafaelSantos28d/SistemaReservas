@@ -51,6 +51,10 @@ namespace SistemaReserva.API.Middleware
             {
                 await HandleExceptionAsync(context, ex, HttpStatusCode.Conflict);
             }
+            catch(UnauthorizedAccessException ex)
+            {
+                await HandleExceptionAsync(context,ex,HttpStatusCode.Unauthorized);
+            }
             catch (NotFoundException ex)
             {
                 await HandleExceptionAsync(context, ex, HttpStatusCode.NotFound);
