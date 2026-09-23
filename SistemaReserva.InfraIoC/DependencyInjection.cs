@@ -16,7 +16,7 @@ using SistemaReserva.Application.Recursos.UpdateRecurso;
 using SistemaReserva.Application.Reservas.CancelarReserva;
 using SistemaReserva.Application.Reservas.CreateReserva;
 using SistemaReserva.Application.Reservas.GetAllReservas;
-using SistemaReserva.Application.Reservas.GetReservaByEmail;
+using SistemaReserva.Application.Reservas.GetReservaById;
 using SistemaReserva.Domain.Entities;
 using SistemaReserva.Domain.Interfaces;
 using SistemaReserva.Infrastructure.Context;

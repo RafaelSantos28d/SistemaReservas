@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Security.Claims;
 using System.Text;
 
-namespace SistemaReserva.Application.Reservas.GetReservaByEmail
+namespace SistemaReserva.Application.Reservas.GetReservaById
 {
     public class GetReservasByIdService : IGetReservasByIdService
     {

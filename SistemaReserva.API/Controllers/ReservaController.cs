@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using SistemaReserva.Application.Reservas.CancelarReserva;
 using SistemaReserva.Application.Reservas.CreateReserva;
 using SistemaReserva.Application.Reservas.GetAllReservas;
-using SistemaReserva.Application.Reservas.GetReservaByEmail;
+using SistemaReserva.Application.Reservas.GetReservaById;
 using SistemaReserva.Domain.Constants;
 using SistemaReserva.Domain.Pagination;
 using System.Security.Claims;

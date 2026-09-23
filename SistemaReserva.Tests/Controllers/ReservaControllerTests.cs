@@ -5,7 +5,7 @@ using SistemaReserva.API.Controllers;
 using SistemaReserva.Application.Reservas.CancelarReserva;
 using SistemaReserva.Application.Reservas.CreateReserva;
 using SistemaReserva.Application.Reservas.GetAllReservas;
-using SistemaReserva.Application.Reservas.GetReservaByEmail;
+using SistemaReserva.Application.Reservas.GetReservaById;
 using SistemaReserva.Domain.Pagination;
 using System.Security.Claims;
 

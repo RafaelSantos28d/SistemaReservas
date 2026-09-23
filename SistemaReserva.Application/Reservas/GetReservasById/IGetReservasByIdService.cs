@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SistemaReserva.Application.Reservas.GetReservaByEmail
+namespace SistemaReserva.Application.Reservas.GetReservaById
 {
     public interface IGetReservasByIdService
     {
