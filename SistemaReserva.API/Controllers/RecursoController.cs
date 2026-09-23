@@ -58,7 +58,7 @@ namespace SistemaReserva.API.Controllers
             var result = await _deleteRecursoService.DeleteRecursoAsync(id);
             return NoContent();
         }
-
+        [Authorize]
         [HttpGet("{id}",Name ="GetRecursoByIdAsync")]
         public async Task<ActionResult<GetRecursoByIdResponse>> GetRecursoByIdAsync([FromRoute] int id)
         {
